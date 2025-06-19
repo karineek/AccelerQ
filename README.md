@@ -51,7 +51,7 @@ then run:
 docker run -dt dockerfile
 ```
 
-SKIP THIS PART, unless you wish to install the tool locally, outside DOCKER (not recommended, unless developing new parts).
+**SKIP THIS PART**, unless you wish to install the tool locally, outside DOCKER (not recommended, unless developing new parts).
 
 Before starting, install Python3.10.12 as the default on your system.
 ```
