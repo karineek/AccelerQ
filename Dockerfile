@@ -59,9 +59,14 @@ ENV PATH="/root/.cargo/bin:${PATH}"
   RUN pip3 install pipenv
 
   # Get our repository
-  RUN git clone git@github.com:karineek/AccelerQ.git
+  RUN git clone https://github.com/karineek/AccelerQ.git
+
+  # Add data and code needed
+  RUN cp -r /home/kclq/quantum-algorithm-grand-challenge-2024/utils /home/kclq/AccelerQ/
+  RUN cp /home/kclq/quantum-algorithm-grand-challenge-2024/hamiltonian/* /home/kclq/AccelerQ/hamiltonian/
 
   # Install Jupyter Notebook
+  WORKDIR /home/kclq/AccelerQ/
   RUN pip3 install jupyter
   RUN pip3 install pip pipenv --upgrade
   RUN pip3 install -r requirements.txt
@@ -77,7 +82,7 @@ ENV PATH="/root/.cargo/bin:${PATH}"
   RUN pip3 install stopit
   
   # Install Julia things
-   WORKDIR /home/kclq/AccelerQ/script/
+  WORKDIR /home/kclq/AccelerQ/scripts/
   RUN python3 STAB.py
   RUN pip3 install openfermion # last update!
 

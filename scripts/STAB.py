@@ -1,5 +1,6 @@
 # ------ ADDED IMPORT ------- TODO: Check if we can keep them
 import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 import hashlib         # STAB - REMOVE
 import json            # STAB - REMOVE
 import sys
