@@ -83,6 +83,7 @@ ENV PATH="/root/.cargo/bin:${PATH}"
   
   # Install Julia things
   WORKDIR /home/kclq/AccelerQ/scripts/
+  RUN cp /home/kclq/AccelerQ/src/first_answer.py /home/kclq/AccelerQ/scripts/
   RUN python3 STAB.py
   RUN pip3 install openfermion # last update!
 
