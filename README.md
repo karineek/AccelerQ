@@ -29,6 +29,14 @@ Hardware requirements: You will need a Unix machine with 10 GB HD free space and
 
 You will need to install the following:
 
+If using Docker image or building with Docker
+- Docker
+
+or else
+- Python 3.10.12
+- Several Python and Unix packages detailed below
+
+We recommend using Docker, at least at first.
 
 ## ADPT-QSCI
 
