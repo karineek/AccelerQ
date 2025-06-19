@@ -1,11 +1,10 @@
-Troubleshooting Docker
+# Troubleshooting Docker
 sudo apt-get install docker.io
 docker build -t dockerfile .
 
-
-if permission denied try to add a docker group:
+# If permission is denied, try to add a Docker group:
 sudo groupadd docker
-sudo usermod -aG docker <username>
+sudo usermod -aG docker $USER
 
-if still not working log out and in: 
+# If still not working, log out and in: 
 su - $USER
