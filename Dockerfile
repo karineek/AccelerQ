@@ -77,9 +77,10 @@ ENV PATH="/root/.cargo/bin:${PATH}"
   RUN pip3 install stopit
   
   # Install Julia things
+   WORKDIR /home/kclq/AccelerQ/script/
   RUN python3 STAB.py
   RUN pip3 install openfermion # last update!
 
   # Starts the docker
   USER root
-  WORKDIR /home/kclq/AccelerQ/
+  WORKDIR /home/kclq/AccelerQ/src/
