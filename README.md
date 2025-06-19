@@ -109,14 +109,12 @@ python3 STAB.py
 
 Please take a look at the dependencies in the requirements.txt file.
 
-### Setup the rest of the Experimental environment
+### Setup Troubleshooting
 
 You might need to create a swap file to run the ADPT-QSCI and QCELS with 20+ qubits.
 ```
 ./AccelerQ/scripts/0-swap-setup.sh <YOUR-HOME-DIR>
 ```
-
-### Docker Help
 
 If you have a permission issue running Docker, you can run this script to try to solve it:
 ```
