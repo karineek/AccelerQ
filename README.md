@@ -105,7 +105,41 @@ pip3 install juliacall
 python3 STAB.py
 ```
 
-## ADPT-QSCI
+### Python Packages
+
+Please take a look at the dependencies in the requirements.txt file.
+
+### Setup the rest of the Experimental environment
+
+You might need to create a swap file to run the ADPT-QSCI and QCELS with 20+ qubits.
+```
+./AccelerQ/scripts/0-swap-setup.sh <YOUR-HOME-DIR>
+```
+
+### Docker Help
+
+If you have a permission issue running Docker, you can run this script to try to solve it:
+```
+./AccelerQ/scripts/docker_troubleshooting.sh
+```
+
+### Hardware Specifications
+
+- Architectures: x86, ARM
+
+### Reproduce OOPSLA 2025 Evaluation:
+
+TODO
+
+## Additional Information about the Optimised Quantum Implementation and Data
+
+We used two algorithms.
+
+### QCELS
+
+We wrote a version of the algorithm. See QCELS/QCELS_answer.py. This code is only for reference.
+
+### ADPT-QSCI
 
 Clone the original repository
 ```
@@ -119,21 +153,3 @@ cp quantum-algorithm-grand-challenge-2024/hamiltonian/* hamiltonian/
 cp quantum-algorithm-grand-challenge-2024/problem/first_answer.py src/
 ```
 
-## QCELS
-
-We wrote a version of the algorithm. See QCELS/QCELS_answer.py. This code is only for reference.
-
-## Python Packages
-
-Please take a look at the dependencies in the requirements.txt file.
-
-## Setup the rest of the Experimental environment
-
-You might need to create a swapfile to run the ADPT-QSCI and QCELS with 20+ qubits.
-```
-./AccelerQ/scripts/0-swap-setup.sh <YOUR-HOME-DIR>
-```
-
-### Hardware Specifications
-
-- Architectures: x86, ARM
