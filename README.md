@@ -1,7 +1,23 @@
 # AccelerQ
 
-Evaluation was done with two QE solver implementation. While the QCELS implementation is supplied with this Git Repository, you will have to 
-pull the ADPT-QSCI code (the part that required no changes) from the original Git Repository.
+This repository is a public version of the [KCL_QAGC](https://github.com/Connorpl/KCL_QAGC) project, which is actively under development.
+
+### Project Overview
+
+Evaluation was done with two QE solver implementations. While the QCELS implementation is supplied with this Git Repository, you will have to pull the ADPT-QSCI code (the part that required no changes) from the original Git Repository.
+
+### Team
+
+**King's College London (Informatics Department):**
+
+- Avner Bensoussan
+- Karine Even-Mendoza
+- Sophie Fortz
+
+**King's College London (Physics Department):**
+
+- Elena Chachkarova
+- Connor Lenihan
 
 ## ADPT-QSCI
 
@@ -31,3 +47,7 @@ You might need to create a swapfile to run the ADPT-QSCI and QCELS with 20+ qubi
 ```
 ./AccelerQ/scripts/0-swap-setup.sh <YOUR-HOME-DIR>
 ```
+
+### Hardware Specifications
+
+- Architectures: x86, ARM
