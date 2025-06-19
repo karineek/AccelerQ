@@ -67,6 +67,43 @@ sudo apt-get -y update \
 sudo apt-get -y install libcurl4-openssl-dev libcurl4-doc libidn-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev
 sudo apt-get install -y cmake libopenblas-dev
 ```
+get the tool:
+```
+git clone git@github.com:karineek/AccelerQ.git
+cd AccelerQ/scripts/
+```
+then install the Python requirements
+```
+# Upgrade pip
+pip3 install --upgrade pip --no-warn-script-location
+
+# Core tools
+pip3 install pipenv --upgrade
+pip3 install jupyter
+pip3 install stopit
+pip3 install requests~=2.28.0 --no-warn-script-location
+
+# Install from requirements file (if exists)
+pip3 install -r requirements.txt
+
+# ML libraries
+pip3 install xgboost
+
+# Quantum frameworks
+pip3 install qiskit
+pip3 install openfermion  # (installed only once)
+pip3 install quri-parts
+pip3 install quri-parts-openfermion
+pip3 install quri-parts-qulacs
+pip3 install quri-parts-tket
+pip3 install quri-parts-itensor
+
+# Optional Julia interface
+pip3 install juliacall
+
+# Run main script
+python3 STAB.py
+```
 
 ## ADPT-QSCI
 
