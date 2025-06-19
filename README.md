@@ -34,9 +34,39 @@ If using Docker image or building with Docker
 
 or else
 - Python 3.10.12
-- Several Python and Unix packages detailed below
+- Several Python and Unix packages, detailed below
 
 We recommend using Docker, at least at first.
+
+### Setting UP
+
+Get the code and build docker:
+```
+git clone git@github.com:karineek/AccelerQ.git
+cd AccelerQ
+docker build -t dockerfile .
+```
+then run:
+```
+docker run -dt dockerfile
+```
+
+SKIP THIS PART, unless you wish to install the tool locally, outside DOCKER (not recommended, unless developing new parts).
+
+Before starting, install Python3.10.12 as the default on your system.
+```
+sudo apt-get update
+sudo apt-get install -y software-properties-common
+sudo apt-get update && apt-get install -y apt-utils
+sudo apt-get -y update \
+    && apt-get install -y build-essential git m4 scons zlib1g zlib1g-dev \
+        libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev \
+        python3-dev libboost-all-dev pkg-config libssl-dev \
+        libpng-dev libpng++-dev libhdf5-dev \
+        python3-pip python3-venv automake
+sudo apt-get -y install libcurl4-openssl-dev libcurl4-doc libidn-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev
+sudo apt-get install -y cmake libopenblas-dev
+```
 
 ## ADPT-QSCI
 
