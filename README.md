@@ -206,6 +206,10 @@ The only assumption we used that was given here is that the number of shots in t
 - (Use-Case-1) QCELS tests are [here](https://github.com/karineek/AccelerQ/blob/main/src/kcl_tests_qcels.py);
 - (Use-Case-2) ADPT-QSCI tests are [here](https://github.com/karineek/AccelerQ/blob/main/src/kcl_tests_adapt_vqe.py).
 
-### 3.2 Figure 5 - Hyperparameters' value distribution
+### 3.3 Data of 6.2 Experimental Setup
+
+The data is taken from the resources as described in the paper. For the experiments, you can find the data in the 
+
+### 3.3 Figure 5 - Hyperparameters' value distribution
 
 We checked 
