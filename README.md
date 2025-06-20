@@ -2,7 +2,7 @@
 
 This repository is a public version of the [KCL_QAGC](https://github.com/Connorpl/KCL_QAGC) project, which is actively under development.
 
-## Project Overview
+## 1. Project Overview
 
 Evaluation was done with two QE solver implementations. While the QCELS implementation is supplied with this Git Repository, you will have to pull the ADPT-QSCI code (the part that requires no changes) from the original Git Repository.
 
@@ -19,13 +19,13 @@ Evaluation was done with two QE solver implementations. While the QCELS implemen
 - Elena Chachkarova
 - Connor Lenihan
 
-## Experiments
+## 2. Experiments
 
 Ensure your system meets the requirements, then follow the instructions to reproduce the figures in Section 7 (Results).
 
 Hardware requirements: You will need a Unix machine with 10 GB HD free space and 8 GB of RAM, at least. You might need to set a swap. Operating System: Tested on Ubuntu.
 
-### Software and Packages:
+### 2.1 Software and Packages:
 
 You will need to install the following:
 
@@ -38,7 +38,7 @@ or else
 
 We recommend using Docker, at least at first.
 
-### Setting UP
+### 2.2 Setting UP
 
 Get the code and build Docker:
 ```
@@ -105,13 +105,13 @@ pip3 install juliacall
 python3 STAB.py
 ```
 
-### Python Packages
+### 2.3 Python Packages
 
 Please take a look at the dependencies in the requirements.txt file as well as some ad-hoc solutions in the Dockerfile and the Docker image. 
 
 Python package installations tend to break easily (in general). Please contact us if you require further help.
 
-### Setup Troubleshooting
+### 2.4 Setup Troubleshooting
 
 You might need to create a swap file to run the ADPT-QSCI and QCELS with 20+ qubits.
 ```
@@ -123,11 +123,13 @@ If you have a permission issue running Docker, you can run this script to try to
 ./AccelerQ/scripts/docker_troubleshooting.sh
 ```
 
-### Hardware Specifications
+### 2.5 Hardware Specifications
 
 - Architectures: x86, ARM
 
-### Reproduce OOPSLA 2025 Evaluation:
+## 3. Reproduce OOPSLA 2025 Evaluation:
+
+### 3.1 Table 1 - Analysis of Implementations' Hyperparameters
 
 Table 1. These are parameters that are given as input with the tested/optimised QE implementation.
 
@@ -135,11 +137,13 @@ In this paper, we used two quantum eigensolver (QE) implementations:
 - (Use-Case-1) QCELS, which operates directly on Hamiltonian
 - (Use-Case-2) ADPT-QSCI, which transforms the Hamiltonian to a quantum circuit.
 
+**YOU DO NOT NEED THE DATA of QCELS (Use-Case-1) and ADPT-QSCI (Use-Case-2) UNLESS YOU WISH TO REPRODUCE THE RESULTS OF THE PAPER FOR REPLICATION STUDY**; the scripts here already copy the data from both repositories into the right place before execution.
+
 ### QCELS (Use-Case-1)
 
-A reference implementation of the algorithm is provided in QCELS/QCELS_answer.py, copied as is from [1], based on the original method described in [2].
+An implementation of the algorithm [2] is provided in QCELS/QCELS_answer.py, copied as is from [1].
 
-Note on this implementation: it follows the Hamiltonian model. That is, rather than using discrete gates, the Hamiltonian model computes by evolving the quantum system continuously in time under a time-dependent Hermitian matrix $$H(t)$$. This evolution is governed by **Schrödinger’s equation**:
+**Note on this implementation:** it follows the Hamiltonian model. That is, rather than using discrete gates, the Hamiltonian model computes by evolving the quantum system continuously in time under a time-dependent Hermitian matrix $$H(t)$$. This evolution is governed by **Schrödinger’s equation**:
 
 $$
 i \hbar \frac{d}{dt} |\psi(t)\rangle = H(t) |\psi(t)\rangle
@@ -152,7 +156,11 @@ Ground-State Energy Estimation. PRX Quantum 4 (May 2023), 020331. Issue 2. [http
 
 ### ADPT-QSCI (Use-Case-2)
 
-Clone the original repository
+An implementation of the algorithm [4] is provided in [3].
+
+**Note on this implementation:** it follows the circuit model.
+
+As part of the Docker image, we clone the original repository as we use the code and the data there for training:
 ```
 git clone https://github.com/QunaSys/quantum-algorithm-grand-challenge-2024.git
 ```
@@ -163,4 +171,10 @@ cp -r quantum-algorithm-grand-challenge-2024/utils .
 cp quantum-algorithm-grand-challenge-2024/hamiltonian/* hamiltonian/
 cp quantum-algorithm-grand-challenge-2024/problem/first_answer.py src/
 ```
+
+[3] QunaSys. February 1, 2024. Quantum Algorithm Grand Challenge 2024 (QAGC2024). [https://github.com/QunaSys/quantum-algorithm-grandchallenge-2024].
+
+[4] Keita Kanno, Masaya Kohda, Ryosuke Imai, Sho Koh, Kosuke Mitarai, Wataru Mizukami, and Yuya O. Nakagawa. 2023. Quantum-Selected
+Configuration Interaction: classical diagonalization of Hamiltonians in subspaces selected by quantum computers. arXiv:2302.11320 [quant-ph]
+[https://arxiv.org/abs/2302.11320]
 
