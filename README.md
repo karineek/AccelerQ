@@ -171,7 +171,7 @@ cp quantum-algorithm-grand-challenge-2024/hamiltonian/* hamiltonian/
 cp quantum-algorithm-grand-challenge-2024/problem/first_answer.py src/
 ```
 
-[3] QunaSys. February 1, 2024. Quantum Algorithm Grand Challenge 2024 (QAGC2024). [https://github.com/QunaSys/quantum-algorithm-grandchallenge-2024].
+[3] QunaSys. February 1, 2024. Quantum Algorithm Grand Challenge 2024 (QAGC2024). [[https://github.com/QunaSys/quantum-algorithm-grandchallenge-2024](https://github.com/QunaSys/quantum-algorithm-grand-challenge-2024)].
 
 [4] Keita Kanno, Masaya Kohda, Ryosuke Imai, Sho Koh, Kosuke Mitarai, Wataru Mizukami, and Yuya O. Nakagawa. 2023. Quantum-Selected
 Configuration Interaction: classical diagonalization of Hamiltonians in subspaces selected by quantum computers. arXiv:2302.11320 [quant-ph]
