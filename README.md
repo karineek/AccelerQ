@@ -134,7 +134,7 @@ If you have a permission issue running Docker, you can run this script to try to
 Table 1. These parameters are given as input with the tested/optimised quantum eigensolver (QE) implementations. We describe them here to allow a replication study on similar/same QE implementations. We give the GitHub links of the QE implementations analysed in this study:
 
 - (Use-Case-1) QCELS, which operates directly on Hamiltonian [1,2]
-- (Use-Case-2) ADPT-QSCI, which transforms the Hamiltonian to a quantum circuit [3,4].
+- (Use-Case-2) ADPT-QSCI, which transforms the Hamiltonian to a quantum circuit [3,4,5].
 
 **YOU DO NOT NEED TO DOWNLOAD THE DATA of QCELS (Use-Case-1) and ADPT-QSCI (Use-Case-2) UNLESS YOU WISH TO REPRODUCE THE RESULTS OF THE PAPER FOR REPLICATION STUDY**. 
 
@@ -157,7 +157,7 @@ Ground-State Energy Estimation. PRX Quantum 4 (May 2023), 020331. Issue 2. [http
 
 ### ADPT-QSCI (Use-Case-2)
 
-An implementation of the algorithm [4] is provided in [3].
+An implementation of the algorithm [5] is provided in [3,4].
 
 **Note on this implementation:** it follows the circuit model.
 
@@ -172,8 +172,9 @@ cp -r quantum-algorithm-grand-challenge-2024/utils .
 cp quantum-algorithm-grand-challenge-2024/hamiltonian/* hamiltonian/
 cp quantum-algorithm-grand-challenge-2024/problem/first_answer.py src/
 ```
+[3] QunaSys. February 1, 2023. Quantum Algorithm Grand Challenge 2023 (QAGC2023). [https://github.com/QunaSys/quantum-algorithm-grandchallenge-2023](https://github.com/QunaSys/quantum-algorithm-grand-challenge-2023).
 
-[3] QunaSys. February 1, 2024. Quantum Algorithm Grand Challenge 2024 (QAGC2024). [[https://github.com/QunaSys/quantum-algorithm-grandchallenge-2024](https://github.com/QunaSys/quantum-algorithm-grand-challenge-2024)].
+[4] QunaSys. February 1, 2024. Quantum Algorithm Grand Challenge 2024 (QAGC2024). [[https://github.com/QunaSys/quantum-algorithm-grandchallenge-2024](https://github.com/QunaSys/quantum-algorithm-grand-challenge-2024)].
 
 [4] Keita Kanno, Masaya Kohda, Ryosuke Imai, Sho Koh, Kosuke Mitarai, Wataru Mizukami, and Yuya O. Nakagawa. 2023. Quantum-Selected
 Configuration Interaction: classical diagonalization of Hamiltonians in subspaces selected by quantum computers. arXiv:2302.11320 [quant-ph]
