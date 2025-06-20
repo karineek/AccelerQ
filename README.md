@@ -136,7 +136,9 @@ Table 1. These parameters are given as input with the tested/optimised quantum e
 - (Use-Case-1) QCELS, which operates directly on Hamiltonian [1,2]
 - (Use-Case-2) ADPT-QSCI, which transforms the Hamiltonian to a quantum circuit [3,4].
 
-**YOU DO NOT NEED TO DOWNLOAD THE DATA of QCELS (Use-Case-1) and ADPT-QSCI (Use-Case-2) UNLESS YOU WISH TO REPRODUCE THE RESULTS OF THE PAPER FOR REPLICATION STUDY**; the scripts here already copy the data from both repositories into the right place before execution.
+**YOU DO NOT NEED TO DOWNLOAD THE DATA of QCELS (Use-Case-1) and ADPT-QSCI (Use-Case-2) UNLESS YOU WISH TO REPRODUCE THE RESULTS OF THE PAPER FOR REPLICATION STUDY**. 
+
+**WHY?** Because the scripts here already copy the data from both repositories into the right place before execution and already include the hyperparameters as arguments of a Python function. You can, however, check that all the arguments are related to a hyperparameter for each of the quantum implementations.
 
 ### QCELS (Use-Case-1)
 
