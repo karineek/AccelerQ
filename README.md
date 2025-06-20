@@ -29,7 +29,7 @@ Hardware requirements: You will need a Unix machine with 10 GB HD free space and
 
 You will need to install the following:
 
-If using Docker image or building with Docker
+If using a Docker image or building with Docker
 - Docker
 
 or else
@@ -40,7 +40,7 @@ We recommend using Docker, at least at first.
 
 ### Setting UP
 
-Get the code and build docker:
+Get the code and build Docker:
 ```
 git clone git@github.com:karineek/AccelerQ.git
 cd AccelerQ
@@ -132,14 +132,25 @@ If you have a permission issue running Docker, you can run this script to try to
 Table 1. These are parameters that are given as input with the tested/optimised QE implementation.
 
 In this paper, we used two quantum eigensolver (QE) implementations: 
-(1) QCELS, which operates directly on  
-(2) ADPT-QSCI, which 
+- (Use-Case-1) QCELS, which operates directly on Hamiltonian
+- (Use-Case-2) ADPT-QSCI, which transforms the Hamiltonian to a quantum circuit.
 
-### QCELS
+### QCELS (Use-Case-1)
 
-We wrote a version of the algorithm. See QCELS/QCELS_answer.py. This code is only for reference.
+A reference implementation of the algorithm is provided in QCELS/QCELS_answer.py, copied as is from [1], based on the original method described in [2].
 
-### ADPT-QSCI
+Note on this implementation: it follows the Hamiltonian model. That is, rather than using discrete gates, the Hamiltonian model computes by evolving the quantum system continuously in time under a time-dependent Hermitian matrix $$H(t)$$. This evolution is governed by **Schrödinger’s equation**:
+
+$$
+i \hbar \frac{d}{dt} |\psi(t)\rangle = H(t) |\psi(t)\rangle
+$$
+
+[1] Connorpl. Accessed: July 4, 2024. QCELS_for_QAGC. [https://github.com/Connorpl/QCELS_for_QAGC].
+
+[2] Zhiyan Ding and Lin Lin. 2023. Even Shorter Quantum Circuit for Phase Estimation on Early Fault-Tolerant Quantum Computers with Applications to
+Ground-State Energy Estimation. PRX Quantum 4 (May 2023), 020331. Issue 2. [https://doi.org/10.1103/PRXQuantum.4.020331]
+
+### ADPT-QSCI (Use-Case-2)
 
 Clone the original repository
 ```
