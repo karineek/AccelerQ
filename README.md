@@ -142,7 +142,7 @@ Table 1. These parameters are given as input with the tested/optimised quantum e
 
 ### QCELS (Use-Case-1)
 
-An implementation of the algorithm [2] is provided in QCELS/QCELS_answer.py, copied as is from [1].
+An implementation of the algorithm [2] is provided in [QCELS/QCELS_answer.py](https://github.com/karineek/AccelerQ/blob/main/QCELS/QCELS_answer.py), copied as is from [1].
 
 **Note on this implementation:** it follows the Hamiltonian model. That is, rather than using discrete gates, the Hamiltonian model computes by evolving the quantum system continuously in time under a time-dependent Hermitian matrix $$H(t)$$. This evolution is governed by **Schrödinger’s equation**:
 
