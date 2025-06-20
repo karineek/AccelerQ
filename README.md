@@ -4,7 +4,7 @@ This repository is a public version of the [KCL_QAGC](https://github.com/Connorp
 
 ## Project Overview
 
-Evaluation was done with two QE solver implementations. While the QCELS implementation is supplied with this Git Repository, you will have to pull the ADPT-QSCI code (the part that required no changes) from the original Git Repository.
+Evaluation was done with two QE solver implementations. While the QCELS implementation is supplied with this Git Repository, you will have to pull the ADPT-QSCI code (the part that requires no changes) from the original Git Repository.
 
 ### Team
 
@@ -53,7 +53,7 @@ docker run -it dockerfile /bin/bash
 
 **SKIP THIS PART**, unless you wish to install the tool locally, outside DOCKER (not recommended, unless developing new parts).
 
-Before starting, install Python3.10.12 as the default on your system.
+Before starting, install Python 3.10.12 as the default on your system.
 ```
 sudo apt-get update
 sudo apt-get install -y software-properties-common
@@ -107,7 +107,9 @@ python3 STAB.py
 
 ### Python Packages
 
-Please take a look at the dependencies in the requirements.txt file.
+Please take a look at the dependencies in the requirements.txt file as well as some ad-hoc solutions in the Dockerfile and the Docker image. 
+
+Python package installations tend to break easily (in general). Please contact us if you require further help.
 
 ### Setup Troubleshooting
 
