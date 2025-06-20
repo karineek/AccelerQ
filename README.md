@@ -44,11 +44,11 @@ Get the code and build docker:
 ```
 git clone git@github.com:karineek/AccelerQ.git
 cd AccelerQ
-docker build -t dockerfile .
+docker build --no-cache -t dockerfile .
 ```
 then run:
 ```
-docker run -dt dockerfile
+docker run -it dockerfile /bin/bash
 ```
 
 **SKIP THIS PART**, unless you wish to install the tool locally, outside DOCKER (not recommended, unless developing new parts).
