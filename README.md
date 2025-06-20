@@ -131,16 +131,33 @@ If you have a permission issue running Docker, you can run this script to try to
 
 ### 3.1 Table 1 - Analysis of Implementations' Hyperparameters
 
-Table 1. These parameters are given as input with the tested/optimised quantum eigensolver (QE) implementations. We describe them here to allow a replication study on similar/same QE implementations. We give the GitHub links of the QE implementations analysed in this study:
+Table 1 was extracted manually. For reproducibility and generalisability, we explain below the process. You can go directly to 3.2 if you wish to continue with the execution of the artifact.
+
+These parameters are given as input with the tested/optimised quantum eigensolver (QE) implementations. We describe them here to allow a replication study on similar/same QE implementations. We give the GitHub links of the QE implementations analysed in this study:
 
 - (Use-Case-1) QCELS, which operates directly on Hamiltonian [1,2]
 - (Use-Case-2) ADPT-QSCI, which transforms the Hamiltonian to a quantum circuit [3,4,5].
 
 **YOU DO NOT NEED TO DOWNLOAD THE DATA of QCELS (Use-Case-1) and ADPT-QSCI (Use-Case-2) UNLESS YOU WISH TO REPRODUCE THE RESULTS OF THE PAPER FOR REPLICATION STUDY**. 
 
-**WHY?** Because the scripts here already copy the data from both repositories into the right place before execution and already include the hyperparameters as arguments of a Python function. You can, however, check that all the arguments are related to a hyperparameter for each of the quantum implementations.
+**WHY?** Because the scripts here already copy the data from both repositories into the right place before execution and already include the hyperparameters as arguments of a Python function. You can, however, check that all the arguments are related to a hyperparameter for each of the quantum implementations. For other QE implementations, if not exposing the hyperparameters as arguments, it is required to edit the code.
 
-### QCELS (Use-Case-1)
+For example, this [QE implementation](https://github.com/morim3/DirectOptimizingQSCI/blob/main/problem/answer.py#L494), instead of having it encoded directly:
+```
+            atol=1e-6,
+            final_sampling_shots_coeff=1,
+            max_num_converged=2000,
+```
+You need to have it as a vector of arguments as input. Another example of a [QE implementation](https://github.com/Louisanity/SUN-Qsim/blob/main/problem/answer.py#L237), where the hyperparmeters are typed directly:
+```
+            depth=2,
+            optimizer=SLSQP,
+            max_steps=100,
+            init_param=None
+```
+in both cases, most of the hyperparameters are relatively simple to spot and move outside the function to be arguments.
+
+#### QCELS (Use-Case-1)
 
 An implementation of the algorithm [2] is provided in [QCELS/QCELS_answer.py](https://github.com/karineek/AccelerQ/blob/main/QCELS/QCELS_answer.py), copied as is from [1].
 
@@ -155,9 +172,9 @@ $$
 [2] Zhiyan Ding and Lin Lin. 2023. Even Shorter Quantum Circuit for Phase Estimation on Early Fault-Tolerant Quantum Computers with Applications to
 Ground-State Energy Estimation. PRX Quantum 4 (May 2023), 020331. Issue 2. [https://doi.org/10.1103/PRXQuantum.4.020331]
 
-### ADPT-QSCI (Use-Case-2)
+#### ADPT-QSCI (Use-Case-2)
 
-An implementation of the algorithm [5] is provided in [3,4].
+An [implementation](https://github.com/QunaSys/quantum-algorithm-grand-challenge-2024/blob/main/problem/example_adaptqsci.py) of the algorithm [5] is provided in [3,4].
 
 **Note on this implementation:** it follows the circuit model.
 
@@ -176,7 +193,16 @@ cp quantum-algorithm-grand-challenge-2024/problem/first_answer.py src/
 
 [4] QunaSys. February 1, 2024. Quantum Algorithm Grand Challenge 2024 (QAGC2024). [[https://github.com/QunaSys/quantum-algorithm-grandchallenge-2024](https://github.com/QunaSys/quantum-algorithm-grand-challenge-2024)].
 
-[4] Keita Kanno, Masaya Kohda, Ryosuke Imai, Sho Koh, Kosuke Mitarai, Wataru Mizukami, and Yuya O. Nakagawa. 2023. Quantum-Selected
+[5] Keita Kanno, Masaya Kohda, Ryosuke Imai, Sho Koh, Kosuke Mitarai, Wataru Mizukami, and Yuya O. Nakagawa. 2023. Quantum-Selected
 Configuration Interaction: classical diagonalization of Hamiltonians in subspaces selected by quantum computers. arXiv:2302.11320 [quant-ph]
 [https://arxiv.org/abs/2302.11320]
+
+### 3.2 Table 2 - Tests for QE Implementation
+
+This part is also written manually, unless the QE implementation already has a set of tests/unittests/assumptions to check against, in which case, you can use these, of course.
+
+The only assumption we used that was given here is that the number of shots in total is no more than 10^7, the rest we wrote.
+
+- (Use-Case-1) QCELS tests are here;
+- (Use-Case-2) ADPT-QSCI tests are here.
 
