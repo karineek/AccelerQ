@@ -129,11 +129,11 @@ If you have a permission issue running Docker, you can run this script to try to
 
 ### Reproduce OOPSLA 2025 Evaluation:
 
-TODO
+Table 1. These are parameters that are given as input with the tested/optimised QE implementation.
 
-## Additional Information about the Optimised Quantum Implementation and Data
-
-We used two algorithms.
+In this paper, we used two quantum eigensolver (QE) implementations: 
+(1) QCELS, which operates directly on  
+(2) ADPT-QSCI, which 
 
 ### QCELS
 
