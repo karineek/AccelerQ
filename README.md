@@ -131,13 +131,12 @@ If you have a permission issue running Docker, you can run this script to try to
 
 ### 3.1 Table 1 - Analysis of Implementations' Hyperparameters
 
-Table 1. These are parameters that are given as input with the tested/optimised QE implementation.
+Table 1. These parameters are given as input with the tested/optimised quantum eigensolver (QE) implementations. We describe them here to allow a replication study on similar/same QE implementations. We give the GitHub links of the QE implementations analysed in this study:
 
-In this paper, we used two quantum eigensolver (QE) implementations: 
-- (Use-Case-1) QCELS, which operates directly on Hamiltonian
-- (Use-Case-2) ADPT-QSCI, which transforms the Hamiltonian to a quantum circuit.
+- (Use-Case-1) QCELS, which operates directly on Hamiltonian [1,2]
+- (Use-Case-2) ADPT-QSCI, which transforms the Hamiltonian to a quantum circuit [3,4].
 
-**YOU DO NOT NEED THE DATA of QCELS (Use-Case-1) and ADPT-QSCI (Use-Case-2) UNLESS YOU WISH TO REPRODUCE THE RESULTS OF THE PAPER FOR REPLICATION STUDY**; the scripts here already copy the data from both repositories into the right place before execution.
+**YOU DO NOT NEED TO DOWNLOAD THE DATA of QCELS (Use-Case-1) and ADPT-QSCI (Use-Case-2) UNLESS YOU WISH TO REPRODUCE THE RESULTS OF THE PAPER FOR REPLICATION STUDY**; the scripts here already copy the data from both repositories into the right place before execution.
 
 ### QCELS (Use-Case-1)
 
