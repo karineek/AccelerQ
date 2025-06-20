@@ -208,7 +208,34 @@ The only assumption we used that was given here is that the number of shots in t
 
 ### 3.3 Data of 6.2 Experimental Setup
 
-The data is taken from the resources as described in the paper. For the experiments, you can find the data in the 
+The data is taken from the resources as described in the paper. For the experiments, you can find the data in the [Hamiltonian folder](https://github.com/karineek/AccelerQ/tree/main/hamiltonian). 
+The Dockerfile script copies the Hamiltonian of [[4](https://github.com/QunaSys/quantum-algorithm-grand-challenge-2024/tree/main/hamiltonian)], too.
+
+Using these Hamiltonians, you can perform the first step: Data Augmentation. By running the first stage for each QE implementation:
+
+```
+python3 kcl_QCELS_stage_1.py
+python3 kcl_adapt_vqe_stage_1.py
+```
+The scripts are pretty similar, but contain imports of the respective QE implementation, where you need to change the small system mined:
+```
+    # inputs
+    folder_path = "../hamiltonian/"
+    prefix = "16qubits_05" #  >>>>>>>>>>>>>>>> Change only this!
+    file_name = prefix + ".data"
+    X_file = prefix + ".X.data"
+    Y_file = prefix + ".Y.data"
+```
+
+#### Partial Evaluation
+
+Some systems can take a long time to mine. We create a short script that does it for 2-3 systems.
+
+#### Full-Evaluation
+
+This script mines data from all small systems, but it might take several days to run.
+
+
 
 ### 3.3 Figure 5 - Hyperparameters' value distribution
 
