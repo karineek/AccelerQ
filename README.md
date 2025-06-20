@@ -203,6 +203,6 @@ This part is also written manually, unless the QE implementation already has a s
 
 The only assumption we used that was given here is that the number of shots in total is no more than 10^7, the rest we wrote.
 
-- (Use-Case-1) QCELS tests are here;
-- (Use-Case-2) ADPT-QSCI tests are here.
+- (Use-Case-1) QCELS tests are [here](https://github.com/karineek/AccelerQ/blob/main/src/kcl_tests_QCELS.py);
+- (Use-Case-2) ADPT-QSCI tests are [here](https://github.com/karineek/AccelerQ/blob/main/src/kcl_tests_adapt_vqe.py).
 
