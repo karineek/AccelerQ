@@ -1,3 +1,5 @@
+# This script is for evaluation only. It runs QCELS - Configuration 1 and ADAPT-QSCI  - Configuration 2 only, each repeated 10 times.
+
 firstSTR=`cat first_answer_experiments.py | grep "print(run_algorithm.get_result(n_qubits=" | cut -d'(' -f3 | cut -d' ' -f1`
 sed -i "s:$firstSTR:n_qubits=20,seed=0,:g" first_answer_experiments.py
 for i in {1..10}; do python3 first_answer_experiments.py; done
