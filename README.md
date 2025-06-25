@@ -555,7 +555,27 @@ For phase 3, these parts are relevant:
 AccelerQ-main
 ├── src
      ├── FFFF
-```     
+```
+
+#### Partial Evaluation **fit for a laptop**
+
+Some systems can take 
+```
+cd Artifact_Experiments
+chmod 777 phase_3_short.sh
+./phase_3_short.sh
+```
+This script on X86 with 8 GB RAM ran in our Docker for 8 minutes. Data will be written into ```src``` folder:
+
+
+#### Full-Evaluation
+
+This script
+```
+cd Artifact_Experiments
+chmod 777 phase_3_full.sh
+./phase_3_full.sh
+```
 
 ### 3.6 Figure 5 - Hyperparameters' value distribution
 
