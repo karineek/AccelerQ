@@ -1,6 +1,25 @@
 
 """
-This script is a wrapper for **NEW** QE implementation for phase 3 (model deployment)
+This script is a template for Phase 3 of the AccelerQ pipeline: **model deployment** for a
+new unseen Quantum Eigensolver (QE) implementation. It optimises hyperparameters using a 
+previously trained ML model and optionally applies domain-specific tests to filter candidates.
+Instructions for Adaptation:
+----------------------------
+✅ Replace template stubs with actual QE implementation details:
+  - `generate_hyper_params_template(...)` → generates candidate hyperparameter vectors.
+  - `test_static_template(...)` (optional) → fast, rule-based filtering (e.g., ranges, types).
+  - `test_semi_dynamic_template(...)` (optional) → deeper Hamiltonian-dependent checks.
+
+✅ Place these in a new file named e.g., `kcl_util_<your_qe>.py` and import them here:
+    from kcl_util_<your_qe> import generate_hyper_params_<your_qe>
+    from kcl_tests_<your_qe> import test_static_<your_qe>, test_semi_dynamic_<your_qe>
+
+✅ Update:
+  - The `prefix` to match the system you’re targeting.
+  - The `model_file` to the correct pre-trained XGBoost model name.
+  - `max_size` to match the maximum padded input size from Phase 2 training, otherwise 
+     there is no need to change it.
+__________
 
 This file is part of the AccelerQ Project.
 (2025) King's College London. CC BY 4.0.
