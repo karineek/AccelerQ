@@ -13,7 +13,7 @@ scripts=(
 )
 
 for script in "${scripts[@]}"; do
-  cp "$script" "$script.original"
+  sed -i "s:res=miner(n_qubits, ham, repeats, 660:res=miner(n_qubits, ham, repeats, 5:g" $script
 done
 
 for prefix in "${prefixes[@]}"; do
