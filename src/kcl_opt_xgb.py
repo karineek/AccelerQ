@@ -1,6 +1,10 @@
 
 """
-This script is 
+This module implements a search-based optimisation routine to improve hyperparameter 
+selection for quantum eigensolver configurations. It uses a trained XGBoost regressor 
+to predict expected performance and iteratively refines candidate parameter vectors.
+
+This script is designed for batch optimisation as part of Phase 3.
 
 This file is part of the AccelerQ Project.
 (2025) King's College London. CC BY 4.0.
