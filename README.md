@@ -787,5 +787,11 @@ chmod 777 phase_3_full.sh
 
 We generated the data for this graph by running this script: (**fit for a laptop**)
 ```
-fffff
+cd src
+python3 size_stat_adapt.py 0 0
+python3 size_stat_adapt.py 1 0
+python3 size_stat_adapt.py 1 1
+python3 size_stat_qcels.py 0 0
+python3 size_stat_qcels.py 1 0
+python3 size_stat_qcels.py 1 1
 ```
