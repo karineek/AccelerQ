@@ -8,17 +8,17 @@ import stopit
 import random
 import copy
 
-# Just mine data from 1 hamiltonian for getting a set of 1000 samples
+# Just mine the data from 1 Hamiltonian for getting a set of 1000 samples
 # Timeout is set to 660  seconds
 def miner(n_qubits, ham, repeats, timeout, file_X, file_Y, generator_caller, wrapper_caller, compress_caller):
     # Set precision high enough for this alg.
     np.set_printoptions(precision=17)
 
-    # Initialize lists to store X and Y data
-    X = [] # Random wrappers created from hamiltonians in folder
+    # Initialise lists to store X and Y data
+    X = [] # Random wrappers created from hamiltonians in the folder
     Y = [] # Energy level computed classically for each wrapper in X
 
-    # Create a vector once, to be append to x
+    # Create a vector once, to be appended to x
     ham_vec = ham_to_vector(ham)
 
     # Make sure params are sensible
