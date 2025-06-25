@@ -1,3 +1,18 @@
+
+"""
+This script processes Hamiltonian systems and extracts size before and after truncation 
+under different parameters. It iterates over a set of Hamiltonian datasets. The script 
+outputs detailed numerical results for the size of systems (Hamiltonians) graph/table 
+in the evaluation.
+
+This file is part of the AccelerQ Project.
+(2025) King's College London. CC BY 4.0.
+- You must give appropriate credit, provide a link to the license, and indicate if changes 
+  were made. You may do so in any reasonable manner, but not in any way that suggests 
+  the licensor endorses you or your use.
+
+"""
+
 import sys
 import os
 import numpy as np
