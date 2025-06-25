@@ -61,7 +61,7 @@ or else
 
 We recommend using Docker, at least at first.
 
-### 2.2 Setting UP
+### 2.2 Setting Up
 
 Get the code and build Docker:
 ```
@@ -120,6 +120,7 @@ pip3 install quri-parts-openfermion
 pip3 install quri-parts-qulacs
 pip3 install quri-parts-tket
 pip3 install quri-parts-itensor
+
 
 # Optional Julia interface
 pip3 install juliacall
@@ -265,22 +266,35 @@ The customisation is done via a wrapper function that is an argument for the min
 
 These files in ```src``` folder are involved here:
 ```
-
+AccelerQ-main
+├── src
+     ├── kcl_QCELS_stage_1.py, kcl_adapt_vqe_stage_1.py     # entry points for QCELS and adapt-VQE
+     ├── kcl_util.py                                        # general-purpose helpers (e.g., process_file)
+     ├── kcl_prepare_data.py                                # data preprocessing and feature extraction (miner)
+     ├── kcl_util_qcels.py                                  # QCELS pipeline orchestration and wrappers
+     ├── QCELS_answer_experiments.py                        # QCELS core logic (Wrapper, classical mode)
+     ├── kcl_util_adapt_vqe.py                              # adapt-VQE pipeline orchestration and wrappers
+     ├── first_answer.py                                    # adapt-VQE core logic (Wrapper, classical mode)
 ```
+The data we mined is in the Zenodo Record: ADAPT-QSCI-data.tar.xz and QCELS-data.tar.xz.
+
+To get yourself this data, you can run one of the versions below. We recommend running the short version **fit for a laptop**.
 
 #### Partial Evaluation **fit for a laptop**
 
-Some systems can take a long time to mine. We create a short script that automates the process for 2-3 systems.
+Some systems can take a long time to mine. We create a short script that automates the process for a few systems, each sampled 5 times.
 ```
 cd Artifact_Experiments
+chmod 777 phase_1_short.sh
 ./phase_1_short.sh
 ```
 
 #### Full-Evaluation
 
-This script mines data from **all** small systems, but it can take several days.
+This script mines data from **all** small systems, 660 samples per system, but it can take several days.
 ```
 cd Artifact_Experiments
+chmod 777 phase_1_full.sh
 ./phase_1_full.sh
 ```
 
