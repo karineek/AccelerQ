@@ -544,7 +544,7 @@ in both wrapper scripts: ```kcl_QCELS_stage_2.py``` and ```kcl_adapt_vqe_stage_2
 Once you have the models from Phase 2, you can test them by copying them to the model folder. However, unless trained via GPU, these are likely to perform extremely poorly.
 You can use our pre-trained models, which are already in the model folder.
 
-As before, we have a wrapper script per each QE implementation:
+As before, we have a wrapper script for each QE implementation:
 ```
 python3 kcl_QCELS_stage_3.py
 python3 kcl_adapt_vqe_stage_3.py
@@ -554,7 +554,13 @@ For phase 3, these parts are relevant:
 ```
 AccelerQ-main
 ├── src
-     ├── FFFF
+     ├── kcl_QCELS_stage_3.py, kcl_adapt_vqe_stage_3.py     # optimisation wrappers
+     ├── kcl_tests_qcels.py                                 # QCELS evaluation oracles (test_static_qcels, test_semi_dynamic_qcels)
+     ├── kcl_tests_adapt_vqe.py                             # adapt-VQE evaluation oracles (test_static_adapt, test_semi_dynamic_adapt)
+     ├── kcl_opt_xgb.py                                     # hyperparameter optimisation logic (opt_hyperparams)
+     ├── kcl_util.py                                        # shared utilities (process_file, ham_to_vector, load_model, print_to_file)
+     ├── kcl_util_qcels.py                                  # QCELS parameter generation (generate_hyper_params_qcels)
+     ├── kcl_util_adapt_vqe.py                              # adapt-VQE parameter generation (generate_hyper_params_avqe)
 ```
 
 #### Partial Evaluation **fit for a laptop**
