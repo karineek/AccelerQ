@@ -240,6 +240,11 @@ The only assumption we used that was given here is that the number of shots in t
 - (Use-Case-1) QCELS tests are [here](https://github.com/karineek/AccelerQ/blob/main/src/kcl_tests_qcels.py);
 - (Use-Case-2) ADPT-QSCI tests are [here](https://github.com/karineek/AccelerQ/blob/main/src/kcl_tests_adapt_vqe.py).
 
+
+
+
+
+
 ### 3.3 Phase 1 - Data Augmentation 
 
 This creates the data of "Section 6.2 Experimental Setup".
@@ -319,7 +324,11 @@ chmod 777 phase_1_full.sh
 ./phase_1_full.sh
 ```
 
-### 3.5 ML Model  
+
+
+
+
+### 3.4 Phase 2 - ML Model  
 
 We use the data from the previous section (Phase 1), to train two models, one per quantum implementation.
 ```
@@ -513,7 +522,41 @@ cd Artifact_Experiments
 chmod 777 phase_2_full.sh
 ./phase_2_full.sh
 ```
+If you try it with CPU = 1, you are very likely to get Out-of-Memory "```./phase_2_full.sh: line 26:  6350 Killed                  python3 kcl_QCELS_stage_2.py```", 
+which is expected. This script is for GPU use only.
 
-### 3.5 Figure 5 - Hyperparameters' value distribution
+With GPU, you shall change
+```
+cpu=1 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Change when using a GPU
+```
+to
+```
+cpu=0 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Change when using a GPU
+```
+in both wrapper scripts: ```kcl_QCELS_stage_2.py``` and ```kcl_adapt_vqe_stage_2.py```.
+
+
+
+
+
+### 3.5 Phase 3 - Model Deployment
+
+Once you have the models from Phase 2, you can test them by copying them to the model folder. However, unless trained via GPU, these are likely to perform extremely poorly.
+You can use our pre-trained models, which are already in the model folder.
+
+As before, we have a wrapper script per each QE implementation:
+```
+python3 kcl_QCELS_stage_3.py
+python3 kcl_adapt_vqe_stage_3.py
+```
+
+For phase 3, these parts are relevant:
+```
+AccelerQ-main
+├── src
+     ├── FFFF
+```     
+
+### 3.6 Figure 5 - Hyperparameters' value distribution
 
 We checked 
