@@ -1,3 +1,15 @@
+
+"""
+This script is a wrapper for QCELS QE implementation for phase 3 (model deployment)
+
+This file is part of the AccelerQ Project.
+(2025) King's College London. CC BY 4.0.
+- You must give appropriate credit, provide a link to the license, and indicate if changes 
+  were made. You may do so in any reasonable manner, but not in any way that suggests 
+  the licensor endorses you or your use.
+
+"""
+
 import sys
 import os
 import numpy as np
