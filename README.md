@@ -8,6 +8,20 @@ Read this carefully. **For the artifact evaluation:** Please go to [section 2.6]
 
 The rest of this documentation goes beyond simply making the code **fit for a laptop**. Its purpose is to encourage writing code for quantum computing and to help other researchers get started more easily.
 
+The structure of the artifact is:
+```
+AccelerQ-main/
+├── Artifact_Experiments/   # Contains experiment automation scripts for the Artifact Evaluation
+├── Dockerfile              # Docker setup for reproducibility
+├── QCELS/                  # Original QCELS implementation
+├── README.md               # Documentation
+├── hamiltonian/            # Hamiltonian input files
+├── models/                 # Pretrained model files
+├── requirements.txt        # Dependency list for Python environment
+├── scripts/                # Utility or orchestration scripts
+└── src/                    # Source code for different VQE/QCELS pipelines
+
+```
 
 ## 1. Project Overview
 
@@ -246,7 +260,13 @@ The scripts are pretty similar, but contain imports of the respective QE impleme
     X_file = prefix + ".X.data"
     Y_file = prefix + ".Y.data"
 ```
-These scripts create the data for the learning in the next phase.
+These scripts create the data for the learning in the next phase. These scripts call the miner, which is in ```src/kcl_prepare_data.py```. 
+The customisation is done via a wrapper function that is an argument for the miner function. The wrapper calls either of the algorithms with classical execution (classical flag is true).
+
+These files in ```src``` folder are involved here:
+```
+
+```
 
 #### Partial Evaluation **fit for a laptop**
 
