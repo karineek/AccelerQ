@@ -1,6 +1,7 @@
 
 """
-This script is 
+This module defines validation tests for filtering hyperparameter configurations used 
+in the ADAPT-VQE variant of AccelerQ.
 
 This file is part of the AccelerQ Project.
 (2025) King's College London. CC BY 4.0.
