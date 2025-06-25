@@ -84,7 +84,7 @@ RUN ln -sf /usr/local/bin/python3.10 /usr/bin/python3 && \
   RUN /usr/local/bin/python3.10 -m pip install qiskit
 
 
-  # Going into Julia none-sense
+  # Going into Julia non-sense
   ENV JULIA_VERSION=1.11.1
   RUN curl -fsSL https://julialang-s3.julialang.org/bin/linux/x64/1.11/julia-${JULIA_VERSION}-linux-x86_64.tar.gz \
     | tar -xz -C /opt && \
