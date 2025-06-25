@@ -376,7 +376,7 @@ def main():
         ################ END OPT ONLY ################
         else:
             print ("Default params")
-            res_opt = [num_qubits, False, True, 100, 0.001, False, 100, 10**5, 1e-6, 5, 128, 2, 0]
+            res_opt = [num_qubits, True, True, 100, 0.001, False, 100, 10**5, 1e-6, 5, 128, 2, 0]
 
         # inputs
         prefix = str(num_qubits)+"20qubits_"
