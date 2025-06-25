@@ -819,7 +819,9 @@ To run the full script, you will need access to a powerful computer, or 3 months
 
 We created a lighter version, with only a few systems and two repetitions per system, per QE implementation. This can be run on a CPU and takes aroundX minutes.
 ```
-TODO
+cd Artifact_Experiments
+chmod 777 get_figure_8_data_short.sh
+./get_figure_8_data_full.sh
 ```
 
 #### Full-Evaluation
@@ -827,5 +829,7 @@ TODO
 Note this shall take around 6 months to complete, unless you have access to quantum computing (which, likely, you don't).
 
 ```
-TODO
+cd Artifact_Experiments
+chmod 777 get_figure_8_data_full.sh
+./get_figure_8_data_full.sh
 ```
