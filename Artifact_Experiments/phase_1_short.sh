@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 prefixes=(
-    02qubits_05
     04qubits_05
-    14qubits_05 14qubits_06
+    06qubits_05
+    08qubits_05
 )
 
 cd ../src/
