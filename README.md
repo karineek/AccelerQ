@@ -68,11 +68,12 @@ Get the code and build Docker:
 ```
 git clone git@github.com:karineek/AccelerQ.git
 cd AccelerQ
-docker build --no-cache -t dockerfile .
+
+docker load -i AccelerQ-Docker.tar
 ```
 then run:
 ```
-docker run -it dockerfile /bin/bash
+docker run -it accelerq-docker /bin/bash
 ```
 
 **SKIP THIS PART**, unless you wish to install the tool locally, outside DOCKER (not recommended, unless developing new parts).
@@ -157,7 +158,7 @@ If you have a permission issue running Docker, you can run this script to try to
 Download AccelerQ-Docker.tar from the Zenodo record.
 
 ```
-docker load -i AccelerQ-Docker.tar; docker run -it accelerq-docker
+docker load -i AccelerQ-Docker.tar; docker run -it accelerq-docker /bin/bash
 
 cd Artifact_Experiments
 chmod +x phase_1_short.sh
