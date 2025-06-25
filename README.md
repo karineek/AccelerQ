@@ -565,18 +565,28 @@ AccelerQ-main
 
 #### Partial Evaluation **fit for a laptop**
 
-Some systems can take 
+Some systems can take longer, we picked 3 that we know fit for CPU.
 ```
 cd Artifact_Experiments
+cp ../models/* ../src/   # See note below.
 chmod 777 phase_3_short.sh
 ./phase_3_short.sh
 ```
 This script on X86 with 8 GB RAM ran in our Docker for 8 minutes. Data will be written into ```src``` folder:
 
+**NOTE:** You can use the models you trained, but you will need to update the max size of the record, which is stated at the end of phase 2, per model trained. In the examples here, this was:
+```>> End Training. Max Size is 
+598
+```
+and
+```
+>> End Training. Max Size is 
+604
+```
 
 #### Full-Evaluation
 
-This script
+This script runs the full optimisation for all systems and both QE implementations. This can take around 1 week to finish.
 ```
 cd Artifact_Experiments
 chmod 777 phase_3_full.sh
