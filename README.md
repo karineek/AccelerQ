@@ -57,6 +57,7 @@ If using a Docker image or building with Docker
 
 or else
 - Python 3.10.12
+- Python package setuptools<81 (we used setuptools 80.9.0)
 - Several Python and Unix packages, detailed below
 
 We recommend using Docker, at least at first.
