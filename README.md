@@ -206,7 +206,9 @@ The only assumption we used that was given here is that the number of shots in t
 - (Use-Case-1) QCELS tests are [here](https://github.com/karineek/AccelerQ/blob/main/src/kcl_tests_qcels.py);
 - (Use-Case-2) ADPT-QSCI tests are [here](https://github.com/karineek/AccelerQ/blob/main/src/kcl_tests_adapt_vqe.py).
 
-### 3.3 Data of 6.2 Experimental Setup
+### 3.3 Phase 1 - Data Augmentation 
+
+This creates the data of "Section 6.2 Experimental Setup".
 
 The data is taken from the resources as described in the paper. For the experiments, you can find the data in the [Hamiltonian folder](https://github.com/karineek/AccelerQ/tree/main/hamiltonian). 
 The Dockerfile script copies the Hamiltonian of [[4](https://github.com/QunaSys/quantum-algorithm-grand-challenge-2024/tree/main/hamiltonian)], too.
@@ -226,10 +228,11 @@ The scripts are pretty similar, but contain imports of the respective QE impleme
     X_file = prefix + ".X.data"
     Y_file = prefix + ".Y.data"
 ```
+These scripts create the data for the learning in the next phase.
 
 #### Partial Evaluation
 
-Some systems can take a long time to mine. We create a short script that does it for 2-3 systems.
+Some systems can take a long time to mine. We create a short script that automates the process for 2-3 systems.
 
 #### Full-Evaluation
 
