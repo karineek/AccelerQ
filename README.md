@@ -836,6 +836,6 @@ chmod 777 get_figure_8_data_full.sh
 
 ## 4 Reproducing the Results on a Different QE Implementation
 
-We describe here how to adapt phases 1,2, and 3 to another QE implementation (of your choice).
+We describe how to adapt phases 1,2, and 3 to another QE implementation (of your choice).
 
-TODO
+We prepared 5 template files in ```templates``` folder, with instructions as TODOs on how to write the wrappers for a new, unseen QE implementation.
