@@ -1,6 +1,7 @@
 
 """
-This script is 
+This script contains a set of general utilities and Hamiltonian preprocessing functions
+for the AccelerQ pipeline.
 
 This file is part of the AccelerQ Project.
 (2025) King's College London. CC BY 4.0.
