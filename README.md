@@ -804,6 +804,7 @@ The wrapper script is:
 ```
 cd Artifact_Experiments
 chmod 777 get_figure_7_data.sh
+chmod 777 ../src/*.sh
 ./get_figure_7_data.sh
 ```
 This script might take a bit longer, around 15-45 minutes.
@@ -890,6 +891,7 @@ To run the full script, you will need access to a powerful computer, or 3 months
 We created a lighter version, with only a few systems and two repetitions per system, per QE implementation. This can be run on a CPU and takes aroundX minutes.
 ```
 cd Artifact_Experiments
+chmod 777 ../src/*.sh
 chmod 777 get_figure_8_data_short.sh
 ./get_figure_8_data_short.sh
 ```
@@ -900,6 +902,7 @@ Note this shall take around 6 months to complete, unless you have access to quan
 
 ```
 cd Artifact_Experiments
+chmod 777 ../src/*.sh
 chmod 777 get_figure_8_data_full.sh
 ./get_figure_8_data_full.sh
 ```
