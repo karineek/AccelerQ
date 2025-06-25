@@ -18,10 +18,6 @@ scripts=(
     kcl_adapt_vqe_stage_1.py
 )
 
-for script in "${scripts[@]}"; do
-  cp "$script" "$script.original"
-done
-
 for prefix in "${prefixes[@]}"; do
   for script in "${scripts[@]}"; do
     echo ">> Running $script with prefix $prefix"
