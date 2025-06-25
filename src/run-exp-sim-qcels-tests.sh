@@ -1,3 +1,5 @@
+# This script is for evaluation only. It runs QCELS - Configuration 3 only, repeated 10 times.
+
 firstSTR=`cat QCELS_answer_experiments-tests.py | grep "print(run_algorithm.get_result(n_qubits=" | cut -d'(' -f3 | cut -d' ' -f1`
 sed -i "s:$firstSTR:n_qubits=20,seed=0,:g" QCELS_answer_experiments-tests.py
 for i in {1..10}; do python3 QCELS_answer_experiments-tests.py; done
