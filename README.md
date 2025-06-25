@@ -839,3 +839,23 @@ chmod 777 get_figure_8_data_full.sh
 We describe how to adapt phases 1,2, and 3 to another QE implementation (of your choice).
 
 We prepared 5 template files in ```templates``` folder, with instructions as TODOs on how to write the wrappers for a new, unseen QE implementation.
+
+These files in ```Templates``` folder:
+```
+AccelerQ-main
+├── templates/
+    │
+    ├── kcl_TEMPLATE_stage_1.py        # Phase 1: Data generation from Hamiltonians using the QE method
+    ├── kcl_TEMPLATE_stage_2.py        # Phase 2: ML model training on the generated data
+    ├── kcl_TEMPLATE_stage_3.py        # Phase 3: Deployment – use trained model to optimise hyperparameters
+    │
+    ├── kcl_util_TEMPLATE.py           # Contains QE-specific utility functions:
+    │                                  #   - generate_hyper_params_TEMPLATE(...)
+    │                                  #   - wrapper_TEMPLATE(...)
+    │                                  #   - compress_TEMPLATE(...)
+    │
+    ├── kcl_tests_TEMPLATE.py          # (Optional) Test suite for validating QE hyperparameters
+    │                                  #   - test_static_TEMPLATE(...)
+    │                                  #   - test_semi_dynamic_TEMPLATE(...)
+```
+Then you will need to create some scripts to test with the new hyperparameters and so on, or just use the new suggestion as is.
