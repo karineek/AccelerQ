@@ -1,6 +1,6 @@
 
 """
-This script is a template for Phase 3 of the AccelerQ pipeline: **model deployment** for a
+This script is a **template wrapper** for Phase 3 of the AccelerQ pipeline: **model deployment** for a
 new unseen Quantum Eigensolver (QE) implementation. It optimises hyperparameters using a 
 previously trained ML model and optionally applies domain-specific tests to filter candidates.
 Instructions for Adaptation:
