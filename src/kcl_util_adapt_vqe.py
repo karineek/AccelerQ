@@ -1,6 +1,7 @@
 
 """
-This script is 
+This script contains a set of utility functions for ADAPT-QSCI QE implementation
+for the AccelerQ pipeline. 
 
 This file is part of the AccelerQ Project.
 (2025) King's College London. CC BY 4.0.
