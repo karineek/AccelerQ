@@ -38,7 +38,7 @@ def main():
         print(f">> is_OPT  = {is_OPT}")
         print(f">> is_TEST = {is_TEST}")
     else:
-        print("Usage: python3 size_stat_adapt.py <is_OPT> <is_TEST>")
+        print("Usage: python3 size_stat_qcels.py <is_OPT> <is_TEST>")
         sys.exit(1)
       
     for num_qubits, seed in num_qubits_seed_pairs:
