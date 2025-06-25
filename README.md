@@ -807,3 +807,25 @@ chmod 777 get_figure_7_data.sh
 ./get_figure_7_data.sh
 ```
 This script might take a bit longer, around 45 minutes.
+
+### 3.7 Figure 8 (in Secion 7) and Main Experiment
+
+The data collected into Excel Q-Experiments-20March2025.xlsx and processed later via 10 (see Predictions and PredictionsWithError in 	
+AccelerQ.prism).
+
+To run the full script, you will need access to a powerful computer, or 3 months of a strong CPU server per QE implementation.
+
+#### Partial Evaluation **fit for a laptop**
+
+We created a lighter version, with only a few systems and two repetitions per system, per QE implementation. This can be run on a CPU and takes aroundX minutes.
+```
+TODO
+```
+
+#### Full-Evaluation
+
+Note this shall take around 6 months to complete, unless you have access to quantum computing (which, likely, you don't).
+
+```
+TODO
+```
