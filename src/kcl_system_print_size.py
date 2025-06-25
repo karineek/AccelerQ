@@ -1,6 +1,8 @@
 
 """
-This script is 
+The script loads a Hamiltonian by prefix, flattens it, and prints key statistics
+such as the original term count and compressed vector length. This is a utility 
+script and is not needed as part of the core logic of AccelerQ.
 
 This file is part of the AccelerQ Project.
 (2025) King's College London. CC BY 4.0.
