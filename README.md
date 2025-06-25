@@ -2,6 +2,9 @@
 
 This repository is a public version of the [KCL_QAGC](https://github.com/Connorpl/KCL_QAGC) project, which is actively under development.
 
+**For the artifact evaluation:** Please go to section 2.6 in this document to start. You can then later read this whole document when checking reproducibility. The commands for functionality will be marked (what you actually need to run). Note that this is artifact for quantum code optimisation, which likely takes months to run on a laptop. We, therefore, created a shorter version fit for a laptop. However, we gave the full details to run and develop further this platform if you have access to a GPU or a strong server. We mark these here with the label **fit for a laptop**.
+
+
 ## 1. Project Overview
 
 Evaluation was done with two QE solver implementations. While the QCELS implementation is supplied with this Git Repository, you will have to pull the ADPT-QSCI code (the part that requires no changes) from the original Git Repository.
@@ -24,6 +27,8 @@ Evaluation was done with two QE solver implementations. While the QCELS implemen
 Ensure your system meets the requirements, then follow the instructions to reproduce the figures in Section 7 (Results).
 
 Hardware requirements: You will need a Unix machine with 10 GB HD free space and 8 GB of RAM, at least. You might need to set a swap. Operating System: Tested on Ubuntu.
+
+This section is fully **fit for a laptop**. However, the best is to start with Section 2.6, which quickly sets up the environment with a Docker image.
 
 ### 2.1 Software and Packages:
 
@@ -127,7 +132,16 @@ If you have a permission issue running Docker, you can run this script to try to
 
 - Architectures: x86, ARM
 
+### 2.6 Kick the Tires
+
+```
+python3 kcl_QCELS_stage_1.py
+python3 kcl_adapt_vqe_stage_1.py
+```
+
 ## 3. Reproduce OOPSLA 2025 Evaluation:
+
+Most of the text here is for reproducibility. Please look for **fit for a laptop** tags to see what you can run on a laptop for artifact evaluation.
 
 ### 3.1 Table 1 - Analysis of Implementations' Hyperparameters
 
@@ -230,15 +244,21 @@ The scripts are pretty similar, but contain imports of the respective QE impleme
 ```
 These scripts create the data for the learning in the next phase.
 
-#### Partial Evaluation
+#### Partial Evaluation **fit for a laptop**
 
 Some systems can take a long time to mine. We create a short script that automates the process for 2-3 systems.
+```
+cd Artifact_Experiments
+./phase_1_short.sh
+```
 
 #### Full-Evaluation
 
-This script mines data from all small systems, but it might take several days to run.
-
-
+This script mines data from **all** small systems, but it can take several days.
+```
+cd Artifact_Experiments
+./phase_1_full.sh
+```
 
 ### 3.3 Figure 5 - Hyperparameters' value distribution
 
