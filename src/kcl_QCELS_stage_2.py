@@ -1,9 +1,6 @@
 
 """
-This script processes Hamiltonian systems and extracts size before and after truncation 
-under different parameters. It iterates over a set of Hamiltonian datasets. The script 
-outputs detailed numerical results for the size of systems (Hamiltonians) graph/table 
-in the evaluation.
+This script is a wrapper for QCELS QE implementation for phase 2 (model construction)
 
 This file is part of the AccelerQ Project.
 (2025) King's College London. CC BY 4.0.
