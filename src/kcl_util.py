@@ -10,8 +10,8 @@ This file is part of the AccelerQ Project.
 
 """
 
-import os
 import sys
+import os
 import glob
 import numpy as np
 from datetime import datetime
