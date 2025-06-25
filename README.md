@@ -154,9 +154,24 @@ If you have a permission issue running Docker, you can run this script to try to
 
 ### 2.6 Kick the Tires
 
+Download AccelerQ-Docker.tar from the Zenodo record.
+
 ```
-python3 kcl_QCELS_stage_1.py
-python3 kcl_adapt_vqe_stage_1.py
+docker load -i AccelerQ-Docker.tar; docker run -it accelerq-docker
+
+cd Artifact_Experiments
+chmod +x phase_1_short.sh
+./phase_1_short.sh
+
+chmod +x phase_2_short.sh
+./phase_2_short.sh
+
+cp ../models/* ../src/  # Use pre-trained models (optional)
+chmod +x phase_3_short.sh
+./phase_3_short.sh
+
+chmod +x get_figure_7_data.sh
+./get_figure_7_data.sh
 ```
 
 ## 3. Reproduce OOPSLA 2025 Evaluation:
