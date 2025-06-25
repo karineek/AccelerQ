@@ -245,7 +245,7 @@ The only assumption we used that was given here is that the number of shots in t
 
 
 
-### 3.3 Phase 1 - Data Augmentation 
+### 3.3 Phase 1 - Data Augmentation (Section 6.2, Pages 14-15) 
 
 This creates the data of "Section 6.2 Experimental Setup".
 
@@ -273,13 +273,13 @@ These files in ```src``` folder are involved here:
 ```
 AccelerQ-main
 ├── src
-     ├── kcl_QCELS_stage_1.py, kcl_adapt_vqe_stage_1.py     # entry points for QCELS and adapt-VQE
+     ├── kcl_QCELS_stage_1.py, kcl_adapt_vqe_stage_1.py     # entry points for QCELS and ADPT-QSCI
      ├── kcl_util.py                                        # general-purpose helpers (e.g., process_file)
      ├── kcl_prepare_data.py                                # data preprocessing and feature extraction (miner)
      ├── kcl_util_qcels.py                                  # QCELS pipeline orchestration and wrappers
      ├── QCELS_answer_experiments.py                        # QCELS core logic (Wrapper, classical mode)
-     ├── kcl_util_adapt_vqe.py                              # adapt-VQE pipeline orchestration and wrappers
-     ├── first_answer.py                                    # adapt-VQE core logic (Wrapper, classical mode)
+     ├── kcl_util_adapt_vqe.py                              # ADPT-QSCI pipeline orchestration and wrappers
+     ├── first_answer.py                                    # ADPT-QSCI core logic (Wrapper, classical mode)
 ```
 The data we mined is in the Zenodo Record: ADAPT-QSCI-data.tar.xz and QCELS-data.tar.xz.
 
@@ -328,9 +328,9 @@ chmod 777 phase_1_full.sh
 
 
 
-### 3.4 Phase 2 - ML Model  
+### 3.4 Phase 2 - ML Model  (Section 7, Page 15)
 
-We use the data from the previous section (Phase 1), to train two models, one per quantum implementation.
+We use the data from the previous section (Phase 1) to train two models, one per quantum implementation.
 ```
 python3 kcl_QCELS_stage_2.py
 python3 kcl_adapt_vqe_stage_2.py
@@ -347,7 +347,7 @@ This is phase 2, and these scripts are relevant to it:
 ```
 AccelerQ-main
 ├── src
-     ├── kcl_QCELS_stage_2.py, kcl_adapt_vqe_stage_2.py     # training entry points (QCELS/adapt-VQE)
+     ├── kcl_QCELS_stage_2.py, kcl_adapt_vqe_stage_2.py     # training entry points (QCELS/ADPT-QSCI)
      ├── kcl_util.py                                        # data loading, vectorisation, saving, and utility functions
      ├── kcl_train_xgb.py                                   # wraps XGBoost training (train, vec_to_fixed_size_vec, etc.)
 ```
@@ -539,7 +539,7 @@ in both wrapper scripts: ```kcl_QCELS_stage_2.py``` and ```kcl_adapt_vqe_stage_2
 
 
 
-### 3.5 Phase 3 - Model Deployment
+### 3.5 Phase 3 - Model Deployment (Section 7, Page 15 and Figures 5-6)
 
 Once you have the models from Phase 2, you can test them by copying them to the model folder. However, unless trained via GPU, these are likely to perform extremely poorly.
 You can use our pre-trained models, which are already in the model folder.
@@ -556,24 +556,34 @@ AccelerQ-main
 ├── src
      ├── kcl_QCELS_stage_3.py, kcl_adapt_vqe_stage_3.py     # optimisation wrappers
      ├── kcl_tests_qcels.py                                 # QCELS evaluation oracles (test_static_qcels, test_semi_dynamic_qcels)
-     ├── kcl_tests_adapt_vqe.py                             # adapt-VQE evaluation oracles (test_static_adapt, test_semi_dynamic_adapt)
+     ├── kcl_tests_adapt_vqe.py                             # ADPT-QSCI evaluation oracles (test_static_adapt, test_semi_dynamic_adapt)
      ├── kcl_opt_xgb.py                                     # hyperparameter optimisation logic (opt_hyperparams)
      ├── kcl_util.py                                        # shared utilities (process_file, ham_to_vector, load_model, print_to_file)
      ├── kcl_util_qcels.py                                  # QCELS parameter generation (generate_hyper_params_qcels)
-     ├── kcl_util_adapt_vqe.py                              # adapt-VQE parameter generation (generate_hyper_params_avqe)
+     ├── kcl_util_adapt_vqe.py                              # ADPT-QSCI parameter generation (generate_hyper_params_avqe)
 ```
-The results of the final optimisation stage (Stage 3) are printed directly to stdout. The result of this optimisation is copied into
+The results of the final optimisation stage (Stage 3) are printed directly to stdout. The result of this optimisation is copied into the evaluation scripts
 ```
 AccelerQ-main
 ├── src
      ├── QCELS_answer_experiments.py           # for QCELS with ML only
      ├── QCELS_answer_experiments-tests.py     # for QCELS with tests
-     ├── first_answer_experiments.py           # for Adapt-VQE with ML only
-     ├── first_answer_experiments-tests.py     # for Adapt-VQE with tests
+     ├── first_answer_experiments.py           # for ADPT-QSCI with ML only
+     ├── first_answer_experiments-tests.py     # for ADPT-QSCI with tests
 ```
 for running our evaluation. However, how to use it in practice depends on how the optimised QE implementation gets its inputs.
+We will explain how to run evaluation scripts in Section 3.7 here.
 
-We will  explain how to run these in Section 3.7 here.
+We accumulated all the results in AccelerQ.prism:
+```
+ParamsQCELS_default - Default hyperparameters for QCELS
+ParamsQCELS - ML optimised for QCELS
+ParamsQCELS_Tests - Test and ML (full ability of AccelerQ) for QCELS
+ParamsAdapt_default - Default hyperparameters for ADPT-QSCI
+ParamsAdapt - ML optimised for ADPT-QSCI
+ParamsAdapt_Tests - Test and ML (full ability of AccelerQ) for ADPT-QSCI
+```
+and generated, via Prism 10, the graphs.
 
 #### Partial Evaluation **fit for a laptop**
 
@@ -596,6 +606,173 @@ and
 >> End Training. Max Size is 
 604
 ```
+
+With the pre-trained models, you will get something like this (per Hamiltonian):
+```
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Running kcl_QCELS_stage_3.py with prefix 24qubits_07
+/home/kclq/AccelerQ/src
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+test mps sampling took: (23.144731998443604, Counter({2: 6, 0: 4}))
+test mps sampling took: (0.002546072006225586, Counter({0: 7, 2: 3}))
+>> Start Stage 3
+>> Read ham ../hamiltonian/, 24qubits_07.data
+24qubits_07
+>> Start processing: 24qubits_07.data with qubits 24
+>>>> adding ham of size 56
+>> Running Opt. Hyperparameters
+Prediction on 24 qubits:
+>> Iteration : 1
+>> Iteration : 2
+>> Iteration : 3
+>> Iteration : 4
+>> Iteration : 5
+33
+>> Iteration : 6
+>> Iteration : 7
+>> Iteration : 8
+>> Iteration : 9
+>> Iteration : 10
+58
+>> Iteration : 11
+>> Iteration : 12
+>> Iteration : 13
+>> Iteration : 14
+>> Iteration : 15
+74
+>> Iteration : 16
+>> Iteration : 17
+>> Iteration : 18
+>> Iteration : 19
+>> Iteration : 20
+79
+>> Iteration : 21
+>> Iteration : 22
+>> Iteration : 23
+>> Iteration : 24
+>> Iteration : 25
+88
+>> Iteration : 26
+>> Iteration : 27
+>> Iteration : 28
+>> Iteration : 29
+>> Iteration : 30
+85
+>> Iteration : 31
+>> Iteration : 32
+>> Iteration : 33
+>> Iteration : 34
+>> Iteration : 35
+87
+>> Iteration : 36
+>> Iteration : 37
+>> Iteration : 38
+>> Iteration : 39
+>> Iteration : 40
+87
+>> Iteration : 41
+>> Iteration : 42
+>> Iteration : 43
+>> Iteration : 44
+>> Iteration : 45
+96
+>> Iteration : 46
+>> Iteration : 47
+>> Iteration : 48
+>> Iteration : 49
+Pre-opt succeeded! Result: [
+  2.40000000000000000e+01, 1.20000000000000000e+01, 1.99243641604928884e-01,
+  1.55000000000000000e+01, 7.30000000000000000e+01, 8.37798945239154325e-03,
+  5.52245862953446687e-01 ]
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Running kcl_adapt_vqe_stage_3.py with prefix 24qubits_07
+/home/kclq/AccelerQ/src
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+test mps sampling took: (22.933500051498413, Counter({0: 6, 2: 4}))
+>> Start Stage 3
+>> Read ham ../hamiltonian/, 24qubits_07.data
+24qubits_07
+>> Start processing: 24qubits_07.data with qubits 24
+>>>> adding ham of size 56
+>> Running Opt. Hyperparameters
+Prediction on 24 qubits:
+>> Iteration : 1
+>> Iteration : 2
+>> Iteration : 3
+>> Iteration : 4
+>> Iteration : 5
+1
+>> Iteration : 6
+>> Iteration : 7
+>> Iteration : 8
+>> Iteration : 9
+>> Iteration : 10
+35
+>> Iteration : 11
+>> Iteration : 12
+>> Iteration : 13
+>> Iteration : 14
+>> Iteration : 15
+65
+>> Iteration : 16
+>> Iteration : 17
+>> Iteration : 18
+>> Iteration : 19
+>> Iteration : 20
+95
+>> Iteration : 21
+>> Iteration : 22
+>> Iteration : 23
+>> Iteration : 24
+>> Iteration : 25
+69
+>> Iteration : 26
+>> Iteration : 27
+>> Iteration : 28
+>> Iteration : 29
+>> Iteration : 30
+96
+>> Iteration : 31
+>> Iteration : 32
+>> Iteration : 33
+>> Iteration : 34
+>> Iteration : 35
+69
+>> Iteration : 36
+>> Iteration : 37
+>> Iteration : 38
+>> Iteration : 39
+>> Iteration : 40
+99
+>> Iteration : 41
+>> Iteration : 42
+>> Iteration : 43
+>> Iteration : 44
+>> Iteration : 45
+68
+>> Iteration : 46
+>> Iteration : 47
+>> Iteration : 48
+>> Iteration : 49
+Pre-opt succeeded! Result: [
+  2.40000000000000000e+01, 1.00000000000000000e+00, 1.00000000000000000e+00,
+  7.80000000000000000e+01, 5.62652148279649787e-03, 0.00000000000000000e+00,
+  5.85000000000000000e+02, 8.64140000000000000e+04, 6.61849104902220763e-08,
+  3.00000000000000000e+00, 1.68000000000000000e+02, 3.00000000000000000e+00,
+  6.10000000000000000e+01 ]
+Euclidean dist: 13594.86781840932
+Number of max iteration: 585
+>> Done
+```
+with the "Pre-opt succeeded!" array copied into a table and to the evaluation scripts.
 
 #### Full-Evaluation
 
