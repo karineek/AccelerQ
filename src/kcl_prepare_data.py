@@ -1,6 +1,9 @@
 
 """
-This script is 
+This script is responsible for generating training data by evaluating
+random parameterisations of a quantum eigensolver implementation against a given Hamiltonian.
+
+This is the code of Phase 1 - data augmentation logic.
 
 This file is part of the AccelerQ Project.
 (2025) King's College London. CC BY 4.0.
