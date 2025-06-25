@@ -783,7 +783,7 @@ chmod 777 phase_3_full.sh
 ./phase_3_full.sh
 ```
 
-### 3.6 Figure 7
+### 3.6 Figure 7 (in Section 7)
 
 We generated the data for this graph by running this script: (**fit for a laptop**)
 ```
