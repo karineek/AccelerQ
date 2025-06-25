@@ -43,7 +43,7 @@ if __name__ == "__main__":
     folder_path = "../hamiltonian/"
     prefix = "28qubits_03" #  >>>>>>>>>>>>>>>> Change only this!
     file_name = prefix + ".data"
-
+## TODO: rename the model file name to be of the QE implementation (just for the good order)
     model_file = "model_template_pre_xgb_28.json"
     max_size = 138300
 
@@ -54,7 +54,7 @@ if __name__ == "__main__":
     # Get Ham Qubit Size
     n_qubits=int(result[0])
     print (">> Start processing: "+file_name+" with qubits "+str(n_qubits))
-    # Get the ham flatten once
+    # Get the ham flattened once
     ham28=result[1] # Need to load from Elena's files
     ham28_vec = ham_to_vector(ham28, 50)
 
