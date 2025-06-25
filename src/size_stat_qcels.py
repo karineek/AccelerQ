@@ -32,8 +32,15 @@ def main():
          (28, 0), (28, 1), (28, 2), (28, 3), (28, 4)
     ]
 
-    is_OPT = True
-    is_TEST = True
+    if len(sys.argv) == 3:
+        is_OPT = int(sys.argv[1]) != 0
+        is_TEST = int(sys.argv[2]) != 0
+        print(f">> is_OPT  = {is_OPT}")
+        print(f">> is_TEST = {is_TEST}")
+    else:
+        print("Usage: python3 size_stat_adapt.py <is_OPT> <is_TEST>")
+        sys.exit(1)
+      
     for num_qubits, seed in num_qubits_seed_pairs:
         n_qubits = num_qubits
         if is_TEST:
