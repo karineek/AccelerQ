@@ -1,6 +1,8 @@
 
 """
-This script is 
+This script trains a regression model (the default was XGBoost) to predict the performance
+of quantum eigensolver implementation configurations using previously mined datasets of 
+parameters (X) and classically computed energies (Y).
 
 This file is part of the AccelerQ Project.
 (2025) King's College London. CC BY 4.0.
