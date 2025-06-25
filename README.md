@@ -808,7 +808,7 @@ chmod 777 get_figure_7_data.sh
 ```
 This script might take a bit longer, around 45 minutes.
 
-### 3.7 Figure 8 (in Secion 7) and Main Experiment
+### 3.7 Figure 8 (in Section 7) and Main Experiment
 
 The data collected into Excel Q-Experiments-20March2025.xlsx and processed later via 10 (see Predictions and PredictionsWithError in 	
 AccelerQ.prism).
@@ -821,7 +821,7 @@ We created a lighter version, with only a few systems and two repetitions per sy
 ```
 cd Artifact_Experiments
 chmod 777 get_figure_8_data_short.sh
-./get_figure_8_data_full.sh
+./get_figure_8_data_short.sh
 ```
 
 #### Full-Evaluation
@@ -833,3 +833,9 @@ cd Artifact_Experiments
 chmod 777 get_figure_8_data_full.sh
 ./get_figure_8_data_full.sh
 ```
+
+## 4 Reproducing the Results on a Different QE Implementation
+
+We describe here how to adapt phases 1,2, and 3 to another QE implementation (of your choice).
+
+TODO
