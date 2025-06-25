@@ -783,6 +783,9 @@ chmod 777 phase_3_full.sh
 ./phase_3_full.sh
 ```
 
-### 3.6 Figure 5 - Hyperparameters' value distribution
+### 3.6 Figure 7
 
-We checked 
+We generated the data for this graph by running this script: (**fit for a laptop**)
+```
+fffff
+```
