@@ -18,7 +18,8 @@ done
 
 for prefix in "${prefixes[@]}"; do
   for script in "${scripts[@]}"; do
-    echo ">> Running $script with prefix $prefix"
+    echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Running $script with prefix $prefix"
+    grep "res=miner(n_qubits, ham, repeats" $script
     token=$(grep "Change only this!" "$script" | cut -d'"' -f2)
     sed -i "s|$token|$prefix|g" "$script"
     python3 $script
