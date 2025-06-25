@@ -788,10 +788,21 @@ chmod 777 phase_3_full.sh
 We generated the data for this graph by running this script: (**fit for a laptop**)
 ```
 cd src
-python3 size_stat_adapt.py 0 0
-python3 size_stat_adapt.py 1 0
-python3 size_stat_adapt.py 1 1
-python3 size_stat_qcels.py 0 0
-python3 size_stat_qcels.py 1 0
-python3 size_stat_qcels.py 1 1
+python3 size_stat_adapt.py 0 0 # Size of Hamiltonians with default hyperparameters for ADAPT-QSCI (ADAPT-QSCI default in Fig. 7)
+python3 size_stat_adapt.py 1 0 # Size of Hamiltonians with ml only learned hyperparameters for ADAPT-QSCI (ADAPT-QSCI optimised in Fig. 7)
+python3 size_stat_adapt.py 1 1 # Size of Hamiltonians with AccelerQ learned hyperparameters for ADAPT-QSCI (ADAPT-QSCI wt tests in Fig. 7)
+
+python3 size_stat_qcels.py 0 0 # Size of Hamiltonians with default hyperparameters for QCELS (QCELS default in Fig. 7)
+python3 size_stat_qcels.py 1 0 # Size of Hamiltonians with ml only learned hyperparameters for QCELS (QCELS optimised in Fig. 7)
+python3 size_stat_qcels.py 1 1 # Size of Hamiltonians with AccelerQ learned hyperparameters for QCELS (QCELS wt tests in Fig. 7)
+```
+
+We built a wrapper script that runs these scripts and automatically creates the table, from which we extract the graph via Prism 10 (see SizeOfHam in 	
+AccelerQ.prism).
+
+The wrapper script is:
+```
+cd Artifact_Experiments
+chmod 777 get_figure_7_data.sh
+./get_figure_7_data.sh
 ```
