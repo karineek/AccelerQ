@@ -288,7 +288,27 @@ cd Artifact_Experiments
 chmod 777 phase_1_short.sh
 ./phase_1_short.sh
 ```
-This script on X86 with 8 GB RAM ran in our Docker for 8 minutes.
+This script on X86 with 8 GB RAM ran in our Docker for 8 minutes. Data will be written into ```src``` folder:
+```
+root@08c84bd04541:/home/kclq/AccelerQ# ls -l src/*.npy
+-rw-r--r-- 1 root root    128 Jun 25 10:23 src/02qubits_05.X.data.npy
+-rw-r--r-- 1 root root    128 Jun 25 10:23 src/02qubits_05.Y.data.npy
+-rw-r--r-- 1 root root   1968 Jun 25 10:22 src/02qubits_05A.X.data.npy
+-rw-r--r-- 1 root root    208 Jun 25 10:22 src/02qubits_05A.Y.data.npy
+-rw-r--r-- 1 root root  47408 Jun 25 10:51 src/04qubits_05.X.data.npy
+-rw-r--r-- 1 root root    208 Jun 25 10:51 src/04qubits_05.Y.data.npy
+-rw-r--r-- 1 root root  46928 Jun 25 10:50 src/04qubits_05A.X.data.npy
+-rw-r--r-- 1 root root    208 Jun 25 10:50 src/04qubits_05A.Y.data.npy
+-rw-r--r-- 1 root root  86128 Jun 25 10:54 src/06qubits_05.X.data.npy
+-rw-r--r-- 1 root root   2128 Jun 25 10:54 src/06qubits_05.Y.data.npy
+-rw-r--r-- 1 root root  74128 Jun 25 10:53 src/06qubits_05A.X.data.npy
+-rw-r--r-- 1 root root   2128 Jun 25 10:53 src/06qubits_05A.Y.data.npy
+-rw-r--r-- 1 root root 134128 Jun 25 10:57 src/08qubits_05.X.data.npy
+-rw-r--r-- 1 root root   2128 Jun 25 10:57 src/08qubits_05.Y.data.npy
+-rw-r--r-- 1 root root 122128 Jun 25 10:56 src/08qubits_05A.X.data.npy
+-rw-r--r-- 1 root root   2128 Jun 25 10:56 src/08qubits_05A.Y.data.npy
+```
+The *A* are for QCELS and the other is for ADAPT-QSCI.
 
 #### Full-Evaluation
 
