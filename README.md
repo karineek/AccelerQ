@@ -247,7 +247,6 @@ The data is taken from the resources as described in the paper. For the experime
 The Dockerfile script copies the Hamiltonian of [[4](https://github.com/QunaSys/quantum-algorithm-grand-challenge-2024/tree/main/hamiltonian)], too.
 
 Using these Hamiltonians, you can perform the first step: Data Augmentation. By running the first stage for each QE implementation:
-
 ```
 python3 kcl_QCELS_stage_1.py
 python3 kcl_adapt_vqe_stage_1.py
@@ -298,6 +297,54 @@ chmod 777 phase_1_full.sh
 ./phase_1_full.sh
 ```
 
-### 3.3 Figure 5 - Hyperparameters' value distribution
+### 3.5 ML Model  
+
+We use the data from the previous section (Phase 1), to train two models, one per quantum implementation.
+```
+python3 kcl_QCELS_stage_2.py
+python3 kcl_adapt_vqe_stage_2.py
+```
+When using a GPU, you can edit this
+```
+cpu=1 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Change when using a GPU
+```
+to be falls, otherwise, this script should work on a CPU, but of course with lower performance.
+For the artifact evaluation, you can train the model with the data and try things, but the results will be significantly different from the paper. 
+If you have a GPU, you can retrain the model with the data from ADAPT-QSCI-data.tar.xz and QCELS-data.tar.xz.
+
+This is phase 2, and these scripts are relevant to it:
+```
+AccelerQ-main
+├── src
+     ├── kcl_QCELS_stage_2.py, kcl_adapt_vqe_stage_2.py     # training entry points (QCELS/adapt-VQE)
+     ├── kcl_util.py                                        # data loading, vectorisation, saving, and utility functions
+     ├── kcl_train_xgb.py                                   # wraps XGBoost training (train, vec_to_fixed_size_vec, etc.)
+```
+Python libraries:
+```
+├── sklearn # model selection and regression metrics (train_test_split, mean_squared_error, etc.)
+├── xgboost # XGBoost backend used via xgb.XGBRegressor
+```
+Note: No method-specific code (like first_answer.py or QCELS_answer_experiments.py) is called in Phase 2, except for data location and where to save the models.
+
+#### Partial Evaluation **fit for a laptop**
+
+Use the data you mined before, which is a very small sample, to train the model. This model quality will be low but is good to test on a CPU.
+```
+cd Artifact_Experiments
+chmod 777 phase_2_short.sh
+./phase_2_short.sh
+```
+
+#### Full-Evaluation
+
+This script mines data from **all** small systems using all the data we have in the Zenodo record using a GPU.
+```
+cd Artifact_Experiments
+chmod 777 phase_2_full.sh
+./phase_2_full.sh
+```
+
+### 3.5 Figure 5 - Hyperparameters' value distribution
 
 We checked 
