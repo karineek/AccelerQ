@@ -806,7 +806,77 @@ cd Artifact_Experiments
 chmod 777 get_figure_7_data.sh
 ./get_figure_7_data.sh
 ```
-This script might take a bit longer, around 45 minutes.
+This script might take a bit longer, around 15-45 minutes.
+
+The output should be this:
+```
+root@08c84bd04541:/home/kclq/AccelerQ/Artifact_Experiments# ./get_figure_7_data.sh 
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+  A | B | C | D | E | F | G | H | I
+ ==================================
+ 63636 | 91 | 14537 | 877 | 200 | 985 | 100 | 146 | 98
+ 54717 | 287 | 14537 | 69 | 200 | 807 | 100 | 190 | 146
+ 54723 | 445 | 14535 | 989 | 200 | 934 | 100 | 407 | 116
+ 54710 | 338 | 14551 | 68 | 200 | 551 | 100 | 56 | 174
+ 63636 | 65 | 14537 | 971 | 200 | 182 | 100 | 231 | 167
+ 46 | 46 | 67 | 67 | 67 | 67 | 67 | 56 | 67
+ 56 | 48 | 81 | 81 | 81 | 67 | 81 | 56 | 79
+ 56 | 46 | 81 | 81 | 81 | 81 | 81 | 77 | 75
+ 56 | 50 | 81 | 81 | 81 | 80 | 81 | 78 | 67
+ 56 | 51 | 81 | 81 | 81 | 81 | 81 | 69 | 73
+ 56 | 47 | 81 | 81 | 81 | 81 | 81 | 80 | 78
+ 98700 | 167 | 42982 | 310 | 200 | 197 | 100 | 84 | 310
+ 98700 | 158 | 42982 | 309 | 200 | 1000 | 100 | 100 | 309
+ 98700 | 98 | 42982 | 997 | 200 | 531 | 100 | 55 | 235
+ 98700 | 144 | 42982 | 553 | 200 | 629 | 100 | 261 | 304
+ 98700 | 213 | 42982 | 280 | 200 | 698 | 100 | 100 | 292
+>> Mapping:
+   |-A: Size of Hamiltonian
+   |-B: Reduced size of Ham for ML
+   |-C: Ham qp size
+   |-D: QCELS truncated optimised
+   |-E: QCELS truncated default
+   |-F: ADAPT optimised
+   |-G: ADAPT default
+   |-H: ADAPT truncated wt tests
+   |-I: QCELS truncated wt tests
+>> DONE.
+```
 
 ### 3.7 Figure 8 (in Section 7) and Main Experiment
 
