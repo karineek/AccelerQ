@@ -572,7 +572,7 @@ cp ../models/* ../src/   # See note below.
 chmod 777 phase_3_short.sh
 ./phase_3_short.sh
 ```
-This script on X86 with 8 GB RAM ran in our Docker for 8 minutes. Data will be written into ```src``` folder:
+This script on X86 with 8 GB RAM ran in our Docker for 7 minutes. Data will be written to the screen. We then added them manually when we did our experiments (copy+paste, thought it would not be hard to write a script to automate it, e.g., via ```sed```).
 
 **NOTE:** You can use the models you trained, but you will need to update the max size of the record, which is stated at the end of phase 2, per model trained. In the examples here, this was:
 ```
