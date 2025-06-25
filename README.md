@@ -806,3 +806,4 @@ cd Artifact_Experiments
 chmod 777 get_figure_7_data.sh
 ./get_figure_7_data.sh
 ```
+This script might take a bit longer, around 45 minutes.
