@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 prefixes=(
-    02qubits_05
     04qubits_00 04qubits_01 04qubits_02 04qubits_03 04qubits_04 04qubits_05
     06qubits_05 06qubits_06 06qubits_07
     07qubits_05 07qubits_06
