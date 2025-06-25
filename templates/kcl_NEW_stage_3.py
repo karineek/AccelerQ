@@ -15,8 +15,17 @@ import os
 import numpy as np
 from kcl_util import process_file, ham_to_vector
 from kcl_util_qcels import generate_hyper_params_qcels
-from kcl_tests_qcels import test_static_qcels, test_semi_dynamic_qcels
 from kcl_opt_xgb import opt_hyperparams
+
+## TODO:
+# Implement and add test functions to `kcl_tests_template.py`.
+# At minimum, define:
+#   - `test_static_template(...)`: for fast, rule-based checks (e.g., parameter range, symmetry)
+#   - `test_semi_dynamic_template(...)`: for deeper structural checks (e.g., Hamiltonian reduction, circuit depth)
+# These tests will be used during hyperparameter search (Phase 3) to filter out invalid or suboptimal configurations.
+#
+# Then import them here:
+# from kcl_tests_template import test_static_template, test_semi_dynamic_template
 
 import xgboost as xgb
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
@@ -34,7 +43,8 @@ if __name__ == "__main__":
     folder_path = "../hamiltonian/"
     prefix = "28qubits_03" #  >>>>>>>>>>>>>>>> Change only this!
     file_name = prefix + ".data"
-    model_file = "model_qcels_pre_xgb_28.json"
+
+    model_file = "model_template_pre_xgb_28.json"
     max_size = 138300
 
     # Get Data
