@@ -785,7 +785,7 @@ chmod 777 phase_3_full.sh
 
 ### 3.6 Figure 7 (in Section 7)
 
-We generated the data for this graph by running this script: (**fit for a laptop**)
+We generated the data for this graph by running these scripts: (**fit for a laptop**)
 ```
 cd src
 python3 size_stat_adapt.py 0 0 # Size of Hamiltonians with default hyperparameters for ADAPT-QSCI (ADAPT-QSCI default in Fig. 7)
