@@ -14,8 +14,16 @@ import sys
 import os
 import numpy as np
 from kcl_util import process_file, ham_to_vector
-from kcl_util_qcels import generate_hyper_params_qcels
 from kcl_opt_xgb import opt_hyperparams
+
+## TODO:
+# Create a new module `kcl_util_template.py` and implement:
+#   - `generate_hyper_params_template(...)`: function that produces candidate hyperparameter vectors for your QE method.
+#
+# Once implemented, import it here:
+# from kcl_util_template import generate_hyper_params_template
+#
+# After customising for your QE implementation, rename both the file and function to reflect the actual method name.
 
 ## TODO:
 # Implement and add test functions to `kcl_tests_template.py`.
@@ -60,7 +68,11 @@ if __name__ == "__main__":
 
     # Start mining
     print (">> Running Opt. Hyperparameters")
-    res=opt_hyperparams(model_file, generate_hyper_params_qcels, xgb.XGBRegressor, n_qubits, ham28, ham28_vec, max_size, test_static_qcels, test_semi_dynamic_qcels, None)
+## TODO:
+# Replace `generate_hyper_params_template`, `test_static_template`, and `test_semi_dynamic_template`
+# with your actual QE-specific implementations.
+# If no tests, you can pass `None` for `test_static_template` and/or `test_semi_dynamic_template`.
+    res=opt_hyperparams(model_file, generate_hyper_params_template, xgb.XGBRegressor, n_qubits, ham28, ham28_vec, max_size, test_static_template, test_semi_dynamic_template, None)
     formatted = [f"{num:.17e}" for num in res]
     lines = [", ".join(formatted[i:i+3]) for i in range(0, len(formatted), 3)]
     print("Pre-opt succeeded! Result: [")
