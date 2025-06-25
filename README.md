@@ -288,6 +288,7 @@ cd Artifact_Experiments
 chmod 777 phase_1_short.sh
 ./phase_1_short.sh
 ```
+This script on X86 with 8 GB RAM ran in our Docker for 8 minutes.
 
 #### Full-Evaluation
 
