@@ -95,7 +95,7 @@ RUN ln -sf /usr/local/bin/python3.10 /usr/bin/python3 && \
   RUN /usr/local/bin/python3.10 -m pip install juliacall
   RUN /usr/local/bin/python3.10 -m pip install quri-parts-itensor
   RUN /usr/local/bin/python3.10 -m pip install quri-parts
-  RUN /usr/local/bin/python3.10 -m pip install stopit
+  RUN /usr/local/bin/python3.10 -m pip install stopit numba
   
   # Install Julia things
   WORKDIR /home/kclq/AccelerQ/scripts/
