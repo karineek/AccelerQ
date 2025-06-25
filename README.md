@@ -562,6 +562,18 @@ AccelerQ-main
      ├── kcl_util_qcels.py                                  # QCELS parameter generation (generate_hyper_params_qcels)
      ├── kcl_util_adapt_vqe.py                              # adapt-VQE parameter generation (generate_hyper_params_avqe)
 ```
+The results of the final optimisation stage (Stage 3) are printed directly to stdout. The result of this optimisation is copied into
+```
+AccelerQ-main
+├── src
+     ├── QCELS_answer_experiments.py           # for QCELS with ML only
+     ├── QCELS_answer_experiments-tests.py     # for QCELS with tests
+     ├── first_answer_experiments.py           # for Adapt-VQE with ML only
+     ├── first_answer_experiments-tests.py     # for Adapt-VQE with tests
+```
+for running our evaluation. However, how to use it in practice depends on how the optimised QE implementation gets its inputs.
+
+We will  explain how to run these in Section 3.7 here.
 
 #### Partial Evaluation **fit for a laptop**
 
