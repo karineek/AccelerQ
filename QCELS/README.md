@@ -11,4 +11,4 @@ $$
 [2] Zhiyan Ding and Lin Lin. 2023. Even Shorter Quantum Circuit for Phase Estimation on Early Fault-Tolerant Quantum Computers with Applications to
 Ground-State Energy Estimation. PRX Quantum 4 (May 2023), 020331. Issue 2. [https://doi.org/10.1103/PRXQuantum.4.020331]
 
-**This is not our code. Nor we have any claims on it. Please refer to the original GitHub Repository if you wish to reuse this code.**
+**This is not our code, and we do not claim ownership. Please refer to the original GitHub Repository if you wish to reuse this code.**
