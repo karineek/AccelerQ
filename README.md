@@ -28,6 +28,28 @@ AccelerQ-main/
 
 Evaluation was done with two QE solver implementations. While the QCELS implementation is supplied with this Git Repository, you will have to pull the ADPT-QSCI code (the part that requires no changes) from the original Git Repository.
 
+### Publications
+
+- OOPSLA 2025 Publication:
+```
+Bensoussan, A., Chachkarova, E., Even Mendoza, K., Fortz, S. and Lenihan, C., is (2025). AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators [Accessed, OOPSLA, Jun. 2025].
+```
+  
+- Artifact of OOPSLA 2025 Publication:
+```
+Bensoussan, A., CHACHKAROVA, E., Even Mendoza, K., Fortz, S., & Lenihan, C. (2025). Artifact of AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators (OOPSLA-V1-AE) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.15698517
+```
+
+- Artifact of arXiv 2024 Publication:
+```
+Bensoussan, A., Chachkarova, E., Even-Mendoza, K., Fortz, S., & Lenihan, C. (2024). Artifact of Accelerating Quantum Eigensolver Algorithms With Machine Learning (arXiv 2024). Zenodo. https://doi.org/10.5281/zenodo.13328383
+```
+
+- Early version of this project on arXiv:
+```
+Bensoussan, A., Chachkarova, E., Even-Mendoza, K., Fortz, S. and Lenihan, C., (2024). Accelerating Quantum Eigensolver Algorithms With Machine Learning. arXiv preprint arXiv:2409.13587.
+```
+
 ### Team
 
 **King's College London (Informatics Department):**
@@ -183,6 +205,11 @@ chmod +x phase_3_short.sh
 chmod +x get_figure_7_data.sh
 ./get_figure_7_data.sh
 ```
+
+What to do next?
+- Continue to X, Y and Z for a shortened evaluation fit for a laptop or a small X86 machine.
+- Continue to Section 3 for detailed documentation about the artifact.
+- Continue to Section 4 for details on how to apply AccelerQ on other QE implementations.
 
 ## 3. Reproduce OOPSLA 2025 Evaluation:
 
