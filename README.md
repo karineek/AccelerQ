@@ -79,10 +79,10 @@ docker run -it accelerq-docker /bin/bash
 ```
 We prepared some Docker Troubleshooting: https://github.com/karineek/AccelerQ/blob/main/scripts/README.md. 
 
-**SKIP THIS PART**, unless you wish to install the tool locally, **outside DOCKER** (not recommended, unless developing new parts).
-- Go to 2.4 if you have trouble setting up Docker.
-- Go to 2.6 for Kick-the-Tiers instructions.
-- Continue to read 2.2 only if you wish to install the code outside Docker.
+What to do next?
+- Go to [2.4](https://github.com/karineek/AccelerQ/blob/main/README.md#24-setup-troubleshooting) if you have trouble setting up Docker.
+- Go to [2.6](https://github.com/karineek/AccelerQ/blob/main/README.md#26-kick-the-tires) for Kick-the-Tiers instructions.
+- **SKIP THIS PART**, unless you wish to install the tool locally, **outside DOCKER** (not recommended, unless developing new parts). Continue to read 2.2 only if you wish to install the code outside Docker.
 
 #### Installing AccelerQ without Docker (for developers)
 Before starting, install Python 3.10.12 as the default on your system.
