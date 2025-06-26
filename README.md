@@ -394,7 +394,7 @@ When using a GPU, you can edit this
 ```
 cpu=1 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Change when using a GPU
 ```
-to be false (0), otherwise, this script should work on a CPU, but of course with lower performance.
+to be false (0), otherwise, this script should work on a CPU, but of course, with lower performance.
 For the artifact evaluation, you can train the model with the data and try things, but the results will be significantly different from the paper. 
 If you have a GPU, you can retrain the model with the data from ADAPT-QSCI-data.tar.xz and QCELS-data.tar.xz.
 
@@ -415,7 +415,7 @@ Note: No method-specific code (like first_answer.py or QCELS_answer_experiments.
 
 #### Partial Evaluation **fit for a laptop**
 
-Use the data you mined before, which is a very small sample, to train the model. This model quality will be low but is good to test on a CPU.
+Use the data you mined before, which is a very small sample, to train the model. This model quality will be low, but it is good to test on a CPU.
 ```
 cd Artifact_Experiments
 chmod 777 phase_2_short.sh
@@ -427,7 +427,7 @@ root@08c84bd04541:/home/kclq/AccelerQ# ls -l src/*.json
 -rw-r--r-- 1 root root   237437 Jun 25 11:57 src/model_avqe_pre_xgb_28.json
 -rw-r--r-- 1 root root 57326999 Jun 25 11:57 src/model_qcels_pre_xgb_28.json
 ```
-and this will output something like after 4 minutes in our Docker on X86 machine with 8 GB RAM:
+and this will output something like after 4 minutes in our Docker on an X86 machine with 8 GB RAM:
 ```
 root@08c84bd04541:/home/kclq/AccelerQ/Artifact_Experiments# ./phase_2_short.sh 
 >> Phase 2 starting...
