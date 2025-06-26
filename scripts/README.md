@@ -36,7 +36,7 @@ sudo systemctl restart docker
 docker --version
 docker run hello-world
 ```
-See further help [here]{https://docs.docker.com/engine/install/ubuntu/}
+See further help [here](https://docs.docker.com/engine/install/ubuntu/).
 
 To remove some old docker image and containers, you first need to see which one are still in your system (usually as hidden files):
 ```
