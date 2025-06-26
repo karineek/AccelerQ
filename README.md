@@ -202,8 +202,9 @@ chmod +x phase_3_short.sh
 chmod +x get_figure_7_data.sh
 ./get_figure_7_data.sh
 ```
+Running the above should take around 30-60 minutes to complete.
 
-What to do next?
+**What to do next?**
 - Continue with the following for a shortened evaluation fit for a laptop or a small X86 machine:
    - [Phase 1](https://github.com/karineek/AccelerQ/blob/main/README.md#partial-evaluation-fit-for-a-laptop) for collecting data for training.
    - [Phase 2](https://github.com/karineek/AccelerQ/blob/main/README.md#partial-evaluation-fit-for-a-laptop-1) for training the ML model.
