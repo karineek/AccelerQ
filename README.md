@@ -76,10 +76,9 @@ docker load -i AccelerQ-Docker.tar
 then run:
 ```
 docker run -it accelerq-docker /bin/bash
-```
-We prepared some Docker Troubleshooting: https://github.com/karineek/AccelerQ/blob/main/scripts/README.md. 
+``` 
 
-What to do next?
+**What to do next?**
 - Go to [2.4](https://github.com/karineek/AccelerQ/blob/main/README.md#24-setup-troubleshooting) if you have trouble setting up Docker.
 - Go to [2.6](https://github.com/karineek/AccelerQ/blob/main/README.md#26-kick-the-tires) for Kick-the-Tiers instructions.
 - **SKIP THIS PART**, unless you wish to install the tool locally, **outside DOCKER** (not recommended, unless developing new parts). Continue to read 2.2 only if you wish to install the code outside Docker.
@@ -155,6 +154,7 @@ If you have a permission issue running Docker, you can run this script to try to
 ```
 ./AccelerQ/scripts/docker_troubleshooting.sh
 ```
+We prepared some Docker Troubleshooting: https://github.com/karineek/AccelerQ/blob/main/scripts/README.md.
 
 ### 2.5 Hardware Specifications
 
