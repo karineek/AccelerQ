@@ -77,6 +77,7 @@ then run:
 ```
 docker run -it accelerq-docker /bin/bash
 ```
+We prepared some Docker Troubleshooting: https://github.com/karineek/AccelerQ/blob/main/scripts/README.md. 
 
 **SKIP THIS PART**, unless you wish to install the tool locally, **outside DOCKER** (not recommended, unless developing new parts).
 
