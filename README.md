@@ -69,7 +69,7 @@ Get the code and build [Docker](https://zenodo.org/records/15698517/files/Accele
 ```
 git clone git@github.com:karineek/AccelerQ.git
 cd AccelerQ
-
+wget -O AccelerQ-Docker.tar "https://zenodo.org/records/15698517/files/AccelerQ-Docker.tar?download=1"
 docker load -i AccelerQ-Docker.tar
 ```
 then run:
@@ -160,6 +160,7 @@ If you have a permission issue running Docker, you can run this script to try to
 Download AccelerQ-Docker.tar from the [Zenodo](https://zenodo.org/records/15698517) record.
 
 ```
+wget -O AccelerQ-Docker.tar "https://zenodo.org/records/15698517/files/AccelerQ-Docker.tar?download=1"
 docker load -i AccelerQ-Docker.tar; docker run -it accelerq-docker /bin/bash
 
 cd Artifact_Experiments
