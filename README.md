@@ -65,7 +65,7 @@ We recommend using Docker, at least at first.
 
 ### 2.2 Setting Up
 
-Get the code and build Docker:
+Get the code and build [Docker](https://zenodo.org/records/15698517/files/AccelerQ-Docker.tar?download=1):
 ```
 git clone git@github.com:karineek/AccelerQ.git
 cd AccelerQ
@@ -77,7 +77,7 @@ then run:
 docker run -it accelerq-docker /bin/bash
 ```
 
-**SKIP THIS PART**, unless you wish to install the tool locally, outside DOCKER (not recommended, unless developing new parts).
+**SKIP THIS PART**, unless you wish to install the tool locally, **outside DOCKER** (not recommended, unless developing new parts).
 
 Before starting, install Python 3.10.12 as the default on your system.
 ```
