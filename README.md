@@ -152,11 +152,12 @@ If you have a permission issue running Docker, you can run this script to try to
 
 ### 2.5 Hardware Specifications
 
-- Architectures: x86, ARM
+- Architectures: x86, ARM, GPU (from training models).
+- Tested platforms: Unix Ubuntu 20.
 
 ### 2.6 Kick the Tires
 
-Download AccelerQ-Docker.tar from the Zenodo record.
+Download AccelerQ-Docker.tar from the [Zenodo](https://zenodo.org/records/15698517) record.
 
 ```
 docker load -i AccelerQ-Docker.tar; docker run -it accelerq-docker /bin/bash
