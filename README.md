@@ -168,8 +168,17 @@ We prepared some Docker Troubleshooting: https://github.com/karineek/AccelerQ/bl
 
 ### 2.5 Hardware Specifications
 
-- Architectures: x86, ARM, GPU (from training models).
-- Tested platforms: Unix Ubuntu 20.
+We summarised the hardware requirements:
+```
++-------------|-----------------------------------------------------------------------+
+| Requirement | Details                                                               |
+|-------------|-----------------------------------------------------------------------|
+| Processor   | Training: GPU; Otherwise: X86, arm                                    |
+| HD Space    | At least 15 GB of free disk space                                     |
+| RAM         | 12 GB: Training; 8+ GB: Otherwise                                     |
+| OS          | Tested on i) Unix X86 Ubuntu 20 and  ii) Mac OS m1 macOS Sequoia 15.5 |
++-------------|-----------------------------------------------------------------------+
+```
 
 ### 2.6 Kick the Tires
 
