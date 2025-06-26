@@ -55,7 +55,7 @@ Evaluation was done with two QE solver implementations. While the QCELS implemen
 
 Ensure your system meets the requirements, then follow the instructions to reproduce the figures in Section 7 (Results).
 
-Hardware requirements: You will need a Unix machine with 15 GB HD free space and 8 GB of RAM, at least. You might need to set a swap. Operating System: Tested on Ubuntu.
+Hardware requirements: You will need a Unix machine with 15 GB of HD free space and 8 GB of RAM, at least. You might need to set a swap. Operating System: Tested on Ubuntu.
 
 This section is fully **fit for a laptop**. However, the best is to start with [Section 2.6](https://github.com/karineek/AccelerQ/blob/main/README.md#26-kick-the-tires), which quickly sets up the environment with a Docker image.
 
@@ -271,7 +271,7 @@ As part of the Docker image, we clone the original repository as we use the code
 ```
 git clone https://github.com/QunaSys/quantum-algorithm-grand-challenge-2024.git
 ```
-and then copy the relevant data to utils and hamiltonian folders.
+and then copy the relevant data to the utils and hamiltonian folders.
 
 ```
 cp -r quantum-algorithm-grand-challenge-2024/utils .
@@ -322,7 +322,7 @@ The scripts are pretty similar, but contain imports of the respective QE impleme
     Y_file = prefix + ".Y.data"
 ```
 These scripts create the data for the learning in the next phase. These scripts call the miner, which is in ```src/kcl_prepare_data.py```. 
-The customisation is done via a wrapper function that is an argument for the miner function. The wrapper calls either of the algorithms with classical execution (classical flag is true).
+The customisation is done via a wrapper function that is an argument for the miner function. The wrapper calls either of the algorithms with classical execution (is_classical flag is true).
 
 These files in ```src``` folder are involved here:
 ```
@@ -368,7 +368,7 @@ root@08c84bd04541:/home/kclq/AccelerQ# ls -l src/*.npy
 -rw-r--r-- 1 root root 122128 Jun 25 10:56 src/08qubits_05A.X.data.npy
 -rw-r--r-- 1 root root   2128 Jun 25 10:56 src/08qubits_05A.Y.data.npy
 ```
-The *A* are for QCELS and the other is for ADAPT-QSCI.
+The *A* post-fix files are for QCELS, and the other is for ADAPT-QSCI.
 
 #### Full-Evaluation
 
@@ -580,7 +580,7 @@ chmod 777 phase_2_full.sh
 If you try it with CPU = 1, you are very likely to get Out-of-Memory "```./phase_2_full.sh: line 26:  6350 Killed                  python3 kcl_QCELS_stage_2.py```", 
 which is expected. This script is for GPU use only.
 
-With GPU, you shall change
+With a GPU, you shall change
 ```
 cpu=1 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Change when using a GPU
 ```
