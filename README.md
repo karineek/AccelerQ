@@ -30,25 +30,13 @@ Evaluation was done with two QE solver implementations. While the QCELS implemen
 
 ### Publications
 
-- OOPSLA 2025 Publication:
-```
-Bensoussan, A., Chachkarova, E., Even Mendoza, K., Fortz, S. and Lenihan, C., is (2025). AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators [Accessed, OOPSLA, Jun. 2025].
-```
+- OOPSLA 2025 Publication: "_Bensoussan, A., Chachkarova, E., Even Mendoza, K., Fortz, S. and Lenihan, C., is (2025). AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators [Accessed, OOPSLA, Jun. 2025]"_
   
-- Artifact of OOPSLA 2025 Publication:
-```
-Bensoussan, A., CHACHKAROVA, E., Even Mendoza, K., Fortz, S., & Lenihan, C. (2025). Artifact of AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators (OOPSLA-V1-AE) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.15698517
-```
+- Artifact of OOPSLA 2025 Publication: _"Bensoussan, A., CHACHKAROVA, E., Even Mendoza, K., Fortz, S., & Lenihan, C. (2025). Artifact of AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators (OOPSLA-V1-AE) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.15698517"_
 
-- Artifact of arXiv 2024 Publication:
-```
-Bensoussan, A., Chachkarova, E., Even-Mendoza, K., Fortz, S., & Lenihan, C. (2024). Artifact of Accelerating Quantum Eigensolver Algorithms With Machine Learning (arXiv 2024). Zenodo. https://doi.org/10.5281/zenodo.13328383
-```
+- Artifact of arXiv 2024 Publication: _"Bensoussan, A., Chachkarova, E., Even-Mendoza, K., Fortz, S., & Lenihan, C. (2024). Artifact of Accelerating Quantum Eigensolver Algorithms With Machine Learning (arXiv 2024). Zenodo. https://doi.org/10.5281/zenodo.13328383"_
 
-- Early version of this project on arXiv:
-```
-Bensoussan, A., Chachkarova, E., Even-Mendoza, K., Fortz, S. and Lenihan, C., (2024). Accelerating Quantum Eigensolver Algorithms With Machine Learning. arXiv preprint arXiv:2409.13587.
-```
+- Early version of this project on arXiv: _"Bensoussan, A., Chachkarova, E., Even-Mendoza, K., Fortz, S. and Lenihan, C., (2024). Accelerating Quantum Eigensolver Algorithms With Machine Learning. arXiv preprint arXiv:2409.13587"_
 
 ### Team
 
@@ -207,9 +195,14 @@ chmod +x get_figure_7_data.sh
 ```
 
 What to do next?
-- Continue to X, Y and Z for a shortened evaluation fit for a laptop or a small X86 machine.
-- Continue to Section 3 for detailed documentation about the artifact.
-- Continue to Section 4 for details on how to apply AccelerQ on other QE implementations.
+- Continue with the following for a shortened evaluation fit for a laptop or a small X86 machine:
+   - [Phase 1](https://github.com/karineek/AccelerQ/blob/main/README.md#partial-evaluation-fit-for-a-laptop) for collecting data for training.
+   - [Phase 2](https://github.com/karineek/AccelerQ/blob/main/README.md#partial-evaluation-fit-for-a-laptop-1) for training the ML model.
+   - [Phase 3](https://github.com/karineek/AccelerQ/blob/main/README.md#partial-evaluation-fit-for-a-laptop-2) for deployment of the ML model.
+   - Execution to build [Figure 7](https://github.com/karineek/AccelerQ/blob/main/README.md#36-figure-7-in-section-7)
+   - Execution to build [Figure 8](https://github.com/karineek/AccelerQ/blob/main/README.md#partial-evaluation-fit-for-a-laptop-3)
+- Continue to [Section 3](https://github.com/karineek/AccelerQ#3-reproduce-oopsla-2025-evaluation) for detailed documentation about the artifact.
+- Continue to follow [Section 4](https://github.com/karineek/AccelerQ?tab=readme-ov-file#4-reproducing-the-results-on-a-different-qe-implementation) for details on how to apply AccelerQ on other QE implementations.
 
 ## 3. Reproduce OOPSLA 2025 Evaluation:
 
