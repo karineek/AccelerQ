@@ -45,7 +45,7 @@ Evaluation was done with two QE solver implementations. While the QCELS implemen
 
 Ensure your system meets the requirements, then follow the instructions to reproduce the figures in Section 7 (Results).
 
-Hardware requirements: You will need a Unix machine with 10 GB HD free space and 8 GB of RAM, at least. You might need to set a swap. Operating System: Tested on Ubuntu.
+Hardware requirements: You will need a Unix machine with 15 GB HD free space and 8 GB of RAM, at least. You might need to set a swap. Operating System: Tested on Ubuntu.
 
 This section is fully **fit for a laptop**. However, the best is to start with Section 2.6, which quickly sets up the environment with a Docker image.
 
