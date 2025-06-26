@@ -297,7 +297,7 @@ AccelerQ-main
      ├── kcl_util_qcels.py                                  # QCELS pipeline orchestration and wrappers
      ├── QCELS_answer_experiments.py                        # QCELS core logic (Wrapper, classical mode)
      ├── kcl_util_adapt_vqe.py                              # ADPT-QSCI pipeline orchestration and wrappers
-     ├── first_answer.py                                    # ADPT-QSCI core logic (Wrapper, classical mode)
+     └── first_answer.py                                    # ADPT-QSCI core logic (Wrapper, classical mode)
 ```
 The data we mined is in the Zenodo Record: ADAPT-QSCI-data.tar.xz and QCELS-data.tar.xz.
 
@@ -367,12 +367,12 @@ AccelerQ-main
 ├── src
      ├── kcl_QCELS_stage_2.py, kcl_adapt_vqe_stage_2.py     # training entry points (QCELS/ADPT-QSCI)
      ├── kcl_util.py                                        # data loading, vectorisation, saving, and utility functions
-     ├── kcl_train_xgb.py                                   # wraps XGBoost training (train, vec_to_fixed_size_vec, etc.)
+     └── kcl_train_xgb.py                                   # wraps XGBoost training (train, vec_to_fixed_size_vec, etc.)
 ```
 Python libraries:
 ```
 ├── sklearn # model selection and regression metrics (train_test_split, mean_squared_error, etc.)
-├── xgboost # XGBoost backend used via xgb.XGBRegressor
+└── xgboost # XGBoost backend used via xgb.XGBRegressor
 ```
 Note: No method-specific code (like first_answer.py or QCELS_answer_experiments.py) is called in Phase 2, except for data location and where to save the models.
 
@@ -578,7 +578,7 @@ AccelerQ-main
      ├── kcl_opt_xgb.py                                     # hyperparameter optimisation logic (opt_hyperparams)
      ├── kcl_util.py                                        # shared utilities (process_file, ham_to_vector, load_model, print_to_file)
      ├── kcl_util_qcels.py                                  # QCELS parameter generation (generate_hyper_params_qcels)
-     ├── kcl_util_adapt_vqe.py                              # ADPT-QSCI parameter generation (generate_hyper_params_avqe)
+     └── kcl_util_adapt_vqe.py                              # ADPT-QSCI parameter generation (generate_hyper_params_avqe)
 ```
 The results of the final optimisation stage (Stage 3) are printed directly to stdout. The result of this optimisation is copied into the evaluation scripts
 ```
@@ -587,7 +587,7 @@ AccelerQ-main
      ├── QCELS_answer_experiments.py           # for QCELS with ML only
      ├── QCELS_answer_experiments-tests.py     # for QCELS with tests
      ├── first_answer_experiments.py           # for ADPT-QSCI with ML only
-     ├── first_answer_experiments-tests.py     # for ADPT-QSCI with tests
+     └── first_answer_experiments-tests.py     # for ADPT-QSCI with tests
 ```
 for running our evaluation. However, how to use it in practice depends on how the optimised QE implementation gets its inputs.
 We will explain how to run evaluation scripts in Section 3.7 here.
@@ -947,6 +947,6 @@ AccelerQ-main
     │
     ├── kcl_tests_TEMPLATE.py          # (Optional) Test suite for validating QE hyperparameters
     │                                  #   - test_static_TEMPLATE(...)
-    │                                  #   - test_semi_dynamic_TEMPLATE(...)
+    └──                                #   - test_semi_dynamic_TEMPLATE(...)
 ```
 Then you will need to create some scripts to test with the new hyperparameters and so on, or just use the new suggestion as is.
