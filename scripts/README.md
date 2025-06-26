@@ -43,3 +43,10 @@ To remove some old docker image and containers, you first need to see which one 
 docker system df -v
 ```
 You then can remove images with ```docker rmi <hash-image>``` and containers with ```docker rm <hash-container>```.
+
+# Furhter help (Mac OS)
+
+Install Docker:
+```
+brew install --cask docker
+```
