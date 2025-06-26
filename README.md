@@ -176,7 +176,7 @@ We summarised the hardware requirements:
 | Processor   | Training: GPU; Otherwise: X86, arm                                    |
 | HD Space    | At least 15 GB of free disk space                                     |
 | RAM         | 12 GB: Training; 8+ GB: Otherwise                                     |
-| OS          | Tested on i) Unix X86 Ubuntu 20 and  ii) Mac OS m1 macOS Sequoia 15.5 |
+| OS          | Tested on i) Unix X86 Ubuntu 20 and ii) Mac OS m1 macOS Sequoia 15.5  |
 +-------------|-----------------------------------------------------------------------+
 ```
 
