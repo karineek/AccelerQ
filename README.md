@@ -939,7 +939,7 @@ root@08c84bd04541:/home/kclq/AccelerQ/Artifact_Experiments# ./get_figure_7_data.
 The data collected into Excel Q-Experiments-20March2025.xlsx and processed later via 10 (see Predictions and PredictionsWithError in 	
 AccelerQ.prism).
 
-To run the full script, you will need access to a powerful computer, or 3 months of a strong CPU server per QE implementation.
+To run the full script, you’ll need ~3 months on a CPU server per QE implementation's evaluation.
 
 #### Partial Evaluation **fit for a laptop**
 
