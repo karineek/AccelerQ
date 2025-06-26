@@ -19,7 +19,8 @@ AccelerQ-main/
 ├── models/                 # Pretrained model files
 ├── requirements.txt        # Dependency list for Python environment
 ├── scripts/                # Utility or orchestration scripts
-└── src/                    # Source code for different VQE/QCELS pipelines
+├── src/                    # Source code for different VQE/QCELS pipelines
+└── templates/              # A template folder to optimise any QE implementation
 
 ```
 
