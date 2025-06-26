@@ -55,6 +55,7 @@ You will need to install the following:
 
 If using a Docker image or building with Docker
 - Docker
+- wget
 
 or else
 - Python 3.10.12
