@@ -2,6 +2,34 @@
 
 This repository is a public version of the [KCL_QAGC](https://github.com/Connorpl/KCL_QAGC) project, which is actively under development.
 
+## 📚 Table of Contents
+
+- [0. Artifact Evaluation](#0-artifact-evaluation)
+- [1. Project Overview](#1-project-overview)
+- [2. Experiments](#2-experiments)
+  - [2.1 Software and Packages](#21-software-and-packages)
+  - [2.2 Setting Up](#22-setting-up)
+  - [2.3 Python Packages](#23-python-packages)
+  - [2.4 Setup Troubleshooting](#24-setup-troubleshooting)
+  - [2.5 Hardware Specifications](#25-hardware-specifications)
+  - [2.6 Kick the Tires](#26-kick-the-tires)
+  - > 📌 **Quickstart:** Jump directly to [2.6 Kick the Tires](#26-kick-the-tires) to launch the artifact fast!
+- [3. Reproduce OOPSLA 2025 Evaluation](#3-reproduce-oopsla-2025-evaluation)
+  - [3.1 Table 1 – Analysis of Implementations' Hyperparameters](#31-table-1---analysis-of-implementations-hyperparameters)
+  - [3.2 Table 2 – Tests for QE Implementation](#32-table-2---tests-for-qe-implementation)
+  - [3.3 Phase 1 – Data Augmentation](#33-phase-1---data-augmentation-section-62-pages-14-15)
+    - [3.3.1 Partial Evaluation (fit for a laptop)](#partial-evaluation-fit-for-a-laptop)
+  - [3.4 Phase 2 – ML Model](#34-phase-2---ml-model--section-7-page-15)
+    - [3.4.1 Partial Evaluation (fit for a laptop)](#partial-evaluation-fit-for-a-laptop-1)
+  - [3.5 Phase 3 – Model Deployment](#35-phase-3---model-deployment-section-7-page-15-and-figures-5-6)
+    - [3.5.1 Partial Evaluation (fit for a laptop)](#partial-evaluation-fit-for-a-laptop-2)
+  - [3.6 Figure 7 in Section 7](#36-figure-7-in-section-7)
+  - [3.7 Figure 8 in Section 7 and Main Experiment](#37-figure-8-in-section-7-and-main-experiment)
+    - [3.7.1 Partial Evaluation (fit for a laptop)](#partial-evaluation-fit-for-a-laptop-3)
+- [4. Reproducing the Results on a Different QE Implementation](#4-reproducing-the-results-on-a-different-qe-implementation)
+
+
+
 ## 0. Artifact Evaluation
 
 Read this carefully. **For the artifact evaluation:** Please go to [Section 2.6](https://github.com/karineek/AccelerQ/blob/main/README.md#26-kick-the-tires) in this document to start. You can then later read this whole document when checking reproducibility. The commands for functionality will be marked (what you actually need to run). Note that this is artifact for quantum code optimisation, which likely takes months to run on a laptop. We, therefore, created a shorter version fit for a laptop. However, we gave the full details to run and develop further this platform if you have access to a GPU or a strong server. We mark these here with the label **fit for a laptop**. For example: [Phase 1 - Data Augmentation](https://github.com/karineek/AccelerQ/blob/main/README.md#partial-evaluation-fit-for-a-laptop).
