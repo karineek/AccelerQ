@@ -983,6 +983,8 @@ chmod 777 get_figure_8_data_short.sh
 ./get_figure_8_data_short.sh
 ```
 
+**Explanation on the long running time:** The script for Figure 8 executes a QE implementation on 20–24 qubits and may take up to two days. Early results are visible after 2 hours, and the script can be stopped then. Otherwise, it can run unattended to completion.
+
 #### Full-Evaluation
 
 Note this shall take around 6 months to complete, unless you have access to quantum computing (which, likely, you don't).
