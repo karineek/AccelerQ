@@ -2,6 +2,10 @@
 
 This repository is a public version of the [KCL_QAGC](https://github.com/Connorpl/KCL_QAGC) project, which is actively under development.
 
+**Abstract.** AccelerQ is a framework for automatically tuning quantum eigensolver (QE) implementations–these are quantum programs implementing a specific QE algorithm–using machine learning and search-based optimisation. Rather than redesigning quantum algorithms or optimising the implementation of an already existing algorithm, AccelerQ treats QE implementations as black-box
+programs and learns to optimise their hyperparameters to improve accuracy and efficiency.
+Our approach leverages two key insights: (1) training on data extracted from smaller and simpler QE implementations’ inputs, and (2) training a program-specific machine learning (ML) model. To further enhance our approach, we incorporate search-based techniques and genetic algorithms (GA) alongside ML models to efficiently explore the hyperparameter space of QE implementations and avoid local minima.
+
 ## 📚 Table of Contents
 
 - [0. Artifact Evaluation](#0-artifact-evaluation)
