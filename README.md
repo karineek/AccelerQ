@@ -943,7 +943,7 @@ To run the full script, you’ll need ~3 months on a CPU server per QE implement
 
 #### Partial Evaluation **fit for a laptop**
 
-We created a lighter version, with only a few systems and two repetitions per system, per QE implementation. This can be run on a CPU and takes around 12 hours.
+We created a lighter version, with only a few systems and two repetitions per system, per QE implementation. This can be run on a CPU and takes around 48 hours.
 ```
 cd Artifact_Experiments
 chmod 777 ../src/*.sh
