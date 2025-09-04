@@ -30,13 +30,14 @@ Our approach leverages two key insights: (1) training on data extracted from sma
   - [3.6 Figure 7 in Section 7](#36-figure-7-in-section-7)
   - [3.7 Figure 8 in Section 7 and Main Experiment](#37-figure-8-in-section-7-and-main-experiment)
     - [3.7.1 Partial Evaluation (fit for a laptop)](#partial-evaluation-fit-for-a-laptop-3)
+  - [3.8 Figures 9-10 (in Section 7) in the Discussion Section](#TODO)
 - [4. Reproducing the Results on a Different QE Implementation](#4-reproducing-the-results-on-a-different-qe-implementation)
 
 
 
 ## 0. Artifact Evaluation
 
-Read this carefully. **For the artifact evaluation:** Please go to [Section 2.6](https://github.com/karineek/AccelerQ/blob/main/README.md#26-kick-the-tires) in this document to start. You can then later read this whole document when checking reproducibility. The commands for functionality will be marked (what you actually need to run). Note that this is artifact for quantum code optimisation, which likely takes months to run on a laptop. We, therefore, created a shorter version fit for a laptop. However, we gave the full details to run and develop further this platform if you have access to a GPU or a strong server. We mark these here with the label **fit for a laptop**. For example: [Phase 1 - Data Augmentation](https://github.com/karineek/AccelerQ/blob/main/README.md#partial-evaluation-fit-for-a-laptop).
+Read this carefully. **For the artifact evaluation:** Please go to [Section 2.6](https://github.com/karineek/AccelerQ/blob/main/README.md#26-kick-the-tires) in this document to start. You can then later read this whole document when checking reproducibility. The commands for functionality will be marked (what you actually need to run). Note that this is artifact for quantum code optimisation, which likely takes months to run on a laptop. We, therefore, created a shorter version fit for a laptop. However, we gave the full details to run and develop this platform further if you have access to a GPU or a strong server. We mark these here with the label **fit for a laptop**. For example: [Phase 1 - Data Augmentation](https://github.com/karineek/AccelerQ/blob/main/README.md#partial-evaluation-fit-for-a-laptop).
 
 The rest of this documentation goes beyond simply making the code **fit for a laptop**. Its purpose is to encourage writing code for quantum computing and to help other researchers get started more easily.
 
@@ -64,7 +65,7 @@ Evaluation was done with two QE solver implementations. While the QCELS implemen
 
 - OOPSLA 2025 Publication: "_Bensoussan, A., Chachkarova, E., Even Mendoza, K., Fortz, S. and Lenihan, C., is (2025). AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators [Accessed, OOPSLA, Jun. 2025]"_
   
-- Artifact of OOPSLA 2025 Publication: _"Bensoussan, A., Chachkarova, E., Even Mendoza, K., Fortz, S., & Lenihan, C. (2025). Artifact of AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators (OOPSLA-V3-AE) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.15757097"_
+- Artifact of OOPSLA 2025 Publication: _"Bensoussan, A., Chachkarova, E., Even Mendoza, K., Fortz, S., & Lenihan, C. (2025). Artifact of AccelerQ: Accelerating Quantum Eigensolvers With Machine Learning on Quantum Simulators (OOPSLA-V4-AE) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.16878135"_
 
 - Artifact of arXiv 2024 Publication: _"Bensoussan, A., Chachkarova, E., Even-Mendoza, K., Fortz, S., & Lenihan, C. (2024). Artifact of Accelerating Quantum Eigensolver Algorithms With Machine Learning (arXiv 2024). Zenodo. https://doi.org/10.5281/zenodo.13328383"_
 
@@ -994,6 +995,21 @@ cd Artifact_Experiments
 chmod 777 ../src/*.sh
 chmod 777 get_figure_8_data_full.sh
 ./get_figure_8_data_full.sh
+```
+
+### 3.8 Figures 9-10 (in Section 7) in the Discussion Section
+
+The data is examined to find anomalies in the behaviour of 28-qubit systems, from the evaluation section.
+
+We made the code available in Colab: [colab-Notebook::AccelerQ_9_10.ipynb](https://colab.research.google.com/drive/1BzTy1asiLfvReVyUXg7_zBv5UsmzDK7S)
+
+To run it locally, you will need to install:
+```
+pip install notebook
+```
+and then run the notebook in a browser:
+```
+jupyter notebook AccelerQ_9_10.ipynb
 ```
 
 ## 4 Reproducing the Results on a Different QE Implementation
