@@ -30,7 +30,7 @@ Our approach leverages two key insights: (1) training on data extracted from sma
   - [3.6 Figure 7 in Section 7](#36-figure-7-in-section-7)
   - [3.7 Figure 8 in Section 7 and Main Experiment](#37-figure-8-in-section-7-and-main-experiment)
     - [3.7.1 Partial Evaluation (fit for a laptop)](#partial-evaluation-fit-for-a-laptop-3)
-  - [3.8 Figures 9-10 (in Section 7) in the Discussion Section](#TODO)
+  - [3.8 Figures 9-10 (in Section 7) in the Discussion Section](#38-figures-9-10-in-section-7-in-the-discussion-section)
 - [4. Reproducing the Results on a Different QE Implementation](#4-reproducing-the-results-on-a-different-qe-implementation)
 
 
