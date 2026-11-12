@@ -46,6 +46,7 @@ The structure of the artifact is:
 AccelerQ-main/
 ├── Artifact_Experiments/   # Contains experiment automation scripts for the Artifact Evaluation
 ├── Dockerfile              # Docker setup for reproducibility
+├── GI4Q/                   # GI4Q extension: alternative Phase 3 genetic algorithm (see GI4Q/README.md)
 ├── QCELS/                  # Original QCELS implementation
 ├── README.md               # Documentation
 ├── hamiltonian/            # Hamiltonian input files
